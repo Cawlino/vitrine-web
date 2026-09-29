@@ -30,6 +30,7 @@ export const Header = ({ onNavigate }) => {
             </span>
           </div>
           <nav className="hidden md:flex gap-8 text-sm uppercase tracking-widest font-medium pr-16 opacity-0 select-none">
+            <span>Serviços</span>
             <span>Projetos</span>
             <span>Sobre Nós</span>
             <span>Contato</span>
@@ -60,6 +61,7 @@ export const Header = ({ onNavigate }) => {
           </div>
           
           <nav className="hidden md:flex gap-8 text-sm uppercase tracking-widest font-medium pr-16 pointer-events-auto">
+            <button className="hover:opacity-60 transition-opacity" onClick={() => onNavigate('home', '#servicos')}>Serviços</button>
             <button className="hover:opacity-60 transition-opacity" onClick={() => onNavigate('home', '#projetos')}>Projetos</button>
             <button className="hover:opacity-60 transition-opacity" onClick={() => onNavigate('home', '#sobre-nos')}>Sobre Nós</button>
             <button className="hover:opacity-60 transition-opacity" onClick={() => onNavigate('home', '#contato')}>Contato</button>

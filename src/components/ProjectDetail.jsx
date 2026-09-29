@@ -31,6 +31,18 @@ const projectDetails = {
     services: 'Web Design, Landing Page de Conversão',
     technologies: 'React, Vite, CSS, React Router',
     aspect: 'aspect-video w-full'
+  },
+  'gestao-colaboradores': {
+    title: 'GESTÃO',
+    subtitle: 'CORPORATIVA',
+    image: '/gestao-funcionarios.png',
+    description: 'Sistema web completo para gestão corporativa de colaboradores e departamentos com autenticação, dashboard analítico e relatórios. Desenvolvido em React 18, TypeScript e Vite com Material UI (MUI v5), formulários validados com React Hook Form e Yup, autenticação e proteção de rotas com Firebase Auth e persistência em tempo real no Cloud Firestore. Implementa solução técnica dedicada para resolução de dependência circular no cadastro através de gerenciamento de atribuições em lote.',
+    client: 'Gestão Corporativa / RH',
+    services: 'Sistema Web Completo, Dashboard Analítico, Arquitetura de Dados',
+    technologies: 'React 18, TypeScript, Vite, Material UI (MUI v5), Firebase Auth, Cloud Firestore, React Hook Form, Yup',
+    aspect: 'aspect-video w-full',
+    demoUrl: 'https://cadastro-usuario-gilt.vercel.app/',
+    githubUrl: 'https://github.com/natanaelbalbo/CadastroUsuario'
   }
 };
 
@@ -39,11 +51,18 @@ export const ProjectDetail = ({ projectId, onNavigate }) => {
   const project = projectDetails[projectId] || projectDetails['pacex'];
 
   useEffect(() => {
+    const originalTitle = document.title;
+    document.title = `${project.title} ${project.subtitle} | Vitrine Web - Sistemas Web & Landing Pages`;
+
     gsap.fromTo(containerRef.current.children, 
       { y: 50, opacity: 0 }, 
       { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out", delay: 0.5 }
     );
-  }, []);
+
+    return () => {
+      document.title = originalTitle;
+    };
+  }, [project]);
 
   return (
     <div ref={containerRef} className="min-h-screen pt-32 px-6 max-w-7xl mx-auto flex flex-col">
@@ -62,7 +81,7 @@ export const ProjectDetail = ({ projectId, onNavigate }) => {
       <div className={`${project.aspect} bg-zinc-800 rounded-2xl overflow-hidden relative shadow-2xl mb-16`}>
         <img 
           src={project.image} 
-          alt={project.title} 
+          alt={`${project.title} ${project.subtitle} - ${project.services} desenvolvido pela Vitrine Web`} 
           className="w-full h-full object-cover transition-all duration-700"
         />
       </div>
@@ -84,6 +103,34 @@ export const ProjectDetail = ({ projectId, onNavigate }) => {
             <strong className="block mb-2 opacity-50">Tecnologias</strong>
             <span>{project.technologies}</span>
           </div>
+          {(project.demoUrl || project.githubUrl) && (
+            <div className="flex flex-col gap-3 pt-6 border-t border-current/10">
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#1E293B] text-white font-bold hover:bg-black transition-all"
+                  data-cursor="hover"
+                >
+                  <span>Ver Demonstração</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              )}
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-current font-bold hover:bg-[#1E293B] hover:text-white transition-all"
+                  data-cursor="hover"
+                >
+                  <span>Ver Código</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>

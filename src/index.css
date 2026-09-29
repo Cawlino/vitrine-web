@@ -42,3 +42,10 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
 }
+
+@media (min-width: 768px) {
+  .projects-horizontal-track {
+    width: calc(100vw * var(--total-projects, 4));
+  }
+}
+

@@ -64,14 +64,23 @@ export const Footer = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Bottom-Left: Projetos */}
+            {/* Services & Projetos */}
+            <div className="flex justify-end">
+              <button className="hover:opacity-50 transition-opacity uppercase" data-cursor="hover" onClick={() => onNavigate && onNavigate('home', '#servicos')}>Serviços</button>
+            </div>
+
             <div className="flex justify-end">
               <button className="hover:opacity-50 transition-opacity uppercase" data-cursor="hover" onClick={() => onNavigate && onNavigate('home', '#projetos')}>Projetos</button>
             </div>
             
-            {/* Bottom-Right: Sobre Ns */}
+            {/* Sobre Nós */}
             <div className="flex justify-end">
               <button className="hover:opacity-50 transition-opacity uppercase" data-cursor="hover" onClick={() => onNavigate && onNavigate('home', '#sobre-nos')}>Sobre Nós</button>
+            </div>
+
+            {/* Contato */}
+            <div className="flex justify-end">
+              <button className="hover:opacity-50 transition-opacity uppercase" data-cursor="hover" onClick={() => onNavigate && onNavigate('home', '#contato')}>Contato</button>
             </div>
             
           </div>
@@ -87,6 +96,12 @@ export const Footer = ({ onNavigate }) => {
           
         </div>
         
+      </div>
+
+      {/* SEO Footer Bar */}
+      <div className="max-w-[100rem] mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-50 tracking-wider">
+        <p>© {new Date().getFullYear()} Vitrine Web. Desenvolvimento de Sistemas Web, Landing Pages de Alta Conversão e ERPs Sob Medida.</p>
+        <p>Projetado para máxima performance e presença online.</p>
       </div>
     </footer>
   );

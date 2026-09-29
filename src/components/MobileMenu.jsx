@@ -39,20 +39,27 @@ export const MobileMenu = ({ isOpen, onClose, onNavigate }) => {
       <nav className="flex flex-col gap-10 text-center">
         <button 
           ref={el => linksRef.current[0] = el}
+          onClick={() => handleNavigate('home', '#servicos')}
+          className="text-4xl font-bold text-white uppercase tracking-widest"
+        >
+          Serviços
+        </button>
+        <button 
+          ref={el => linksRef.current[1] = el}
           onClick={() => handleNavigate('home', '#projetos')}
           className="text-4xl font-bold text-white uppercase tracking-widest"
         >
           Projetos
         </button>
         <button 
-          ref={el => linksRef.current[1] = el}
+          ref={el => linksRef.current[2] = el}
           onClick={() => handleNavigate('home', '#sobre-nos')}
           className="text-4xl font-bold text-white uppercase tracking-widest"
         >
           Sobre Nós
         </button>
         <button 
-          ref={el => linksRef.current[2] = el}
+          ref={el => linksRef.current[3] = el}
           onClick={() => handleNavigate('home', '#contato')}
           className="text-4xl font-bold text-white uppercase tracking-widest"
         >

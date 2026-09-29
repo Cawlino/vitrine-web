@@ -9,6 +9,7 @@ import { Showcase } from './components/Showcase';
 import { About } from './components/About';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { Services } from './components/Services';
 import { TransitionOverlay } from './components/TransitionOverlay';
 import { ProjectDetail } from './components/ProjectDetail';
 
@@ -111,6 +112,7 @@ function AppContent() {
         {currentView === 'home' && (
           <>
             <Hero />
+            <Services />
             <Showcase onNavigate={handleNavigate} returnToProjectId={lastProjectId} />
             <About />
           </>

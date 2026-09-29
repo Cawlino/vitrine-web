@@ -1,16 +1,159 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vitrine Web - Portfólio</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- SEO Primário: Título e Descrição Otimizados -->
+    <title>Vitrine Web | Desenvolvimento de Sistemas Web, Landing Pages e ERPs</title>
+    <meta
+      name="description"
+      content="A Vitrine Web é uma empresa especializada no desenvolvimento de sistemas web sob medida, landing pages de alta conversão, ERPs corporativos e presença online estratégica."
+    />
+    <meta
+      name="keywords"
+      content="sistema de landing page, sistema web, empresa de sistemas, empresa de desenvolvimento de sistemas, desenvolvimento de software, landing page de alta conversão, ERP sob medida, sistemas corporativos, presença online, criação de sites profissionais, software house, vitrine web, aplicativos web"
+    />
+    <meta name="author" content="Vitrine Web - Daniel Barrionuevo &amp; Natanael Balbo" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://vitrineweboficial.vercel.app/" />
+
+    <!-- Otimizações Regionais e de Idioma -->
+    <meta name="geo.region" content="BR" />
+    <meta name="language" content="Portuguese" />
+    <meta name="rating" content="general" />
+
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://vitrineweboficial.vercel.app/" />
+    <meta property="og:site_name" content="Vitrine Web" />
+    <meta property="og:title" content="Vitrine Web | Desenvolvimento de Sistemas Web, Landing Pages e ERPs" />
+    <meta
+      property="og:description"
+      content="Desenvolvemos sistemas web robustos, landing pages de alta conversão e ERPs sob medida para elevar o faturamento e a presença online da sua empresa."
+    />
+    <meta property="og:image" content="https://vitrineweboficial.vercel.app/logo-vitrine-web.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Vitrine Web - Soluções em Sistemas Web e Landing Pages" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vitrine Web | Desenvolvimento de Sistemas Web, Landing Pages e ERPs" />
+    <meta
+      name="twitter:description"
+      content="Especialistas em desenvolvimento de sistemas web, landing pages de alta conversão e ERPs corporativos sob medida."
+    />
+    <meta name="twitter:image" content="https://vitrineweboficial.vercel.app/logo-vitrine-web.png" />
+
+    <!-- Tema Mobile e Performance -->
+    <meta name="theme-color" content="#0F172A" />
+    <meta name="color-scheme" content="dark light" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Dados Estruturados Schema.org (JSON-LD) para Google Rich Results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://vitrineweboficial.vercel.app/#organization",
+            "name": "Vitrine Web",
+            "alternateName": ["VitrineWeb", "Vitrine Web Soluções Digitais"],
+            "url": "https://vitrineweboficial.vercel.app",
+            "logo": "https://vitrineweboficial.vercel.app/logo-vitrine-web.png",
+            "image": "https://vitrineweboficial.vercel.app/logo-vitrine-web.png",
+            "description": "Empresa especializada em desenvolvimento de sistemas web personalizados, landing pages de alta conversão, ERPs corporativos e presença digital.",
+            "telephone": "+554488680905",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "BR"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/danielbarrionuevo/",
+              "https://www.linkedin.com/in/natanael-figueredo-balbo/",
+              "https://www.instagram.com/danielbarriogomes/",
+              "https://www.instagram.com/natanaelbalbo/"
+            ],
+            "knowsAbout": [
+              "Desenvolvimento de Sistemas Web",
+              "Criação de Landing Pages de Alta Conversão",
+              "Sistemas ERP Sob Medida",
+              "Presença Online e Marketing Digital",
+              "Inteligência Artificial Aplicada",
+              "Software House e Gestão Corporativa"
+            ],
+            "founder": [
+              {
+                "@type": "Person",
+                "name": "Daniel Barrionuevo",
+                "jobTitle": "Engenheiro de Software Full Stack & Tech Lead",
+                "sameAs": "https://www.linkedin.com/in/danielbarrionuevo/"
+              },
+              {
+                "@type": "Person",
+                "name": "Natanael Balbo",
+                "jobTitle": "Engenheiro de Software Full Stack",
+                "sameAs": "https://www.linkedin.com/in/natanael-figueredo-balbo/"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://vitrineweboficial.vercel.app/#website",
+            "url": "https://vitrineweboficial.vercel.app",
+            "name": "Vitrine Web",
+            "publisher": {
+              "@id": "https://vitrineweboficial.vercel.app/#organization"
+            },
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://vitrineweboficial.vercel.app/#services",
+            "name": "Serviços e Soluções da Vitrine Web",
+            "itemListElement": [
+              {
+                "@type": "Service",
+                "position": 1,
+                "name": "Desenvolvimento de Sistemas Web Sob Medida",
+                "description": "Criação de plataformas web escaláveis, dashboards analíticos, autenticação segura e sistemas em nuvem de alta performance."
+              },
+              {
+                "@type": "Service",
+                "position": 2,
+                "name": "Landing Pages de Alta Conversão",
+                "description": "Design moderno e persuasivo focado em captura de leads qualificados e aumento direto nas vendas via WhatsApp e formulários."
+              },
+              {
+                "@type": "Service",
+                "position": 3,
+                "name": "Sistemas ERP & Gestão Corporativa",
+                "description": "Sistemas sob medida para controle de funcionários, departamentos, estoque, financeiro e automação de rotinas empresariais."
+              },
+              {
+                "@type": "Service",
+                "position": 4,
+                "name": "Presença Online & Aplicações com IA",
+                "description": "Desenvolvimento de portfólios institucionais de alto impacto e integração de Inteligência Artificial para modernizar operações."
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

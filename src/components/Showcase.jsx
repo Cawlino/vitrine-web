@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { HoverDeformImage } from './HoverDeformImage';
@@ -9,23 +9,34 @@ const projects = [
   {
     id: 'pacex',
     title: 'PaceX AI',
-    description: 'Um personal trainer virtual integrado em um aplicativo nativo completo. A inteligência artificial de ponta do PaceX aumenta a retenção e o engajamento ao oferecer análises profundas e evolução constante para seus usuários.',
+    category: 'Sistema Web & Inteligência Artificial',
+    description: 'Um ecossistema inteligente de alta performance com IA nativa. Desenvolvido para atuar como personal trainer virtual, elevando engajamento e retenção de usuários através de análise preditiva.',
     image: '/pacex-mobile.png',
-    features: ['Ecossistema Nativo', 'Treinador com IA', 'Retenção e Engajamento'],
+    features: ['Aplicativo Nativo & Web', 'Treinador com IA Preditiva', 'Métricas de Retenção e Engajamento'],
   },
   {
     id: 'adventista-play',
     title: 'Adventista Play',
-    description: 'Transformando o estudo diário em um hábito irresistível através da gamificação. Inspirado nos maiores líderes SaaS, este app maximiza o retorno contínuo dos usuários usando XP, lições modulares e sistema de ofensivas (streaks).',
+    category: 'Plataforma SaaS & Gamificação',
+    description: 'Plataforma educacional com gamificação avançada. Inspirado nos maiores líderes SaaS do mundo, maximiza o retorno contínuo dos usuários usando XP, lições modulares e sistema de ofensivas (streaks).',
     images: ['/adventista-mobile.jpg', '/adventista-mobile-2.jpg', '/adventista-mobile-3.jpg'],
-    features: ['Sistemas Gamificados', 'Engajamento de Usuário', 'Lições Diárias Estruturadas'],
+    features: ['Sistemas Gamificados Sob Medida', 'Retenção e Recorrência SaaS', 'Lições Diárias Estruturadas'],
   },
   {
     id: 'dentista-cassiano',
     title: 'Dr. Cassiano',
-    description: 'Página de alta conversão projetada para consultórios de excelência. Transmite as 3 décadas de autoridade e captura leads ativamente via WhatsApp, convertendo visitantes em pacientes qualificados através de prova social.',
+    category: 'Landing Page de Alta Conversão',
+    description: 'Landing page médica de altíssima conversão projetada para autoridade profissional. Captura leads qualificados via WhatsApp através de copywriting persuasivo e comparador visual interativo de resultados.',
     image: '/dentista-cassiano.png',
-    features: ['Landing Page de Conversão', 'Estratégia de Lead Capture', 'Credibilidade e UI Clean'],
+    features: ['Landing Page de Alta Conversão', 'Estratégia de Lead Capture WhatsApp', 'Credibilidade e UI de Alto Impacto'],
+  },
+  {
+    id: 'gestao-colaboradores',
+    title: 'Gestão Corporativa',
+    category: 'Sistema Web & ERP Sob Medida',
+    description: 'Sistema web corporativo completo para gestão de colaboradores, departamentos, permissões e dashboards analíticos. Solução técnica robusta que substitui planilhas com controle de atribuições em lote.',
+    image: '/gestao-funcionarios.png',
+    features: ['Sistema ERP Sob Medida', 'Dashboard Analítico & Métricas', 'Firebase Auth, Firestore & Permissões'],
   }
 ];
 
@@ -264,7 +275,8 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
 
       <div 
         ref={wrapperRef} 
-        className="flex flex-col md:flex-row flex-nowrap w-full md:w-[calc(100vw*3)] h-full"
+        style={{ '--total-projects': projects.length }}
+        className="projects-horizontal-track flex flex-col md:flex-row flex-nowrap w-full h-full"
       >
         {projects.map((project, index) => {
           const isEven = index % 2 === 0;
@@ -272,19 +284,24 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
           return (
             <div 
               key={project.id} 
-              className="project-row relative w-full md:w-screen h-auto md:h-screen shrink-0 flex items-center justify-center px-4 py-24 md:py-0 md:px-12 lg:px-16 border-b border-white/5 md:border-none last:border-none"
+              className="project-row relative w-full md:w-screen h-auto md:h-screen shrink-0 flex items-center justify-center px-4 py-24 md:py-0 md:pb-16 md:px-12 lg:px-16 border-b border-white/5 md:border-none last:border-none"
             >
-              <div className="max-w-[100rem] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-stretch">
+              <div className="max-w-[100rem] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
                 
-                <div className={`project-text flex flex-col items-start justify-between h-full py-10 lg:py-0 ${isEven ? 'order-2 lg:order-1' : 'order-2 lg:order-2'}`}>
+                <div className={`project-text flex flex-col items-start justify-center py-6 lg:py-0 ${isEven ? 'order-2 lg:order-1' : 'order-2 lg:order-2 lg:pl-16 xl:pl-24'}`}>
                   <div>
-                    <div className="text-xs font-bold tracking-widest uppercase mb-4 opacity-50 pt-2">0{index + 1} / 0{projects.length}</div>
-                    <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight">{project.title}</h2>
+                    <div className="flex items-center gap-3 mb-4 pt-2">
+                      <span className="text-xs font-bold tracking-widest uppercase opacity-50">0{index + 1} / 0{projects.length}</span>
+                      <span className="text-[11px] font-semibold tracking-wider uppercase px-2.5 py-0.5 rounded-full border border-white/20 bg-white/5 opacity-70">
+                        {project.category}
+                      </span>
+                    </div>
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-tight">{project.title}</h2>
                     <p className="text-base md:text-lg opacity-80 mb-8 leading-relaxed max-w-xl">
                       {project.description}
                     </p>
                     
-                    <ul className="space-y-4 mb-10 w-full max-w-md">
+                    <ul className="space-y-4 mb-8 w-full max-w-md">
                       {project.features.map((feature, i) => (
                         <li key={i} className="flex items-center gap-3 text-sm md:text-base">
                           <div className="w-1.5 h-1.5 rounded-full bg-current shrink-0"></div>
@@ -297,15 +314,16 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
                   <button 
                     data-cursor="hover"
                     onClick={() => onNavigate('project', project.id)}
-                    className="mt-auto md:mt-10 px-6 py-3 md:px-8 md:py-4 border border-current rounded-full uppercase tracking-widest text-xs md:text-sm hover:bg-[#1E293B] hover:text-[#F0F4F8] transition-colors duration-300"
+                    aria-label={`Ver estudo de caso completo do projeto ${project.title}`}
+                    className={`mt-4 md:mt-6 px-6 py-3 md:px-8 md:py-4 border border-current rounded-full uppercase tracking-widest text-xs md:text-sm hover:bg-[#1E293B] hover:text-[#F0F4F8] transition-colors duration-300 ${!isEven ? 'lg:ml-8' : ''}`}
                   >
                     Ver Estudo de Caso
                   </button>
                 </div>
 
-                <div className={`w-full h-[50vh] lg:h-full flex ${isEven ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}`}>
+                <div className={`w-full flex items-center justify-center ${isEven ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}`}>
                   <HoverDeformImage 
-                    outerClassName={`project-image-container relative w-full h-full overflow-hidden rounded-2xl`}
+                    outerClassName="project-image-container relative w-full h-[45vh] lg:h-[500px] max-h-[520px] overflow-hidden rounded-2xl"
                     innerClassName="bg-zinc-900 shadow-2xl w-full h-full flex items-center justify-center overflow-hidden"
                   >
                     {project.images ? (
@@ -314,7 +332,7 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
                           <img 
                             key={idx} 
                             src={img} 
-                            alt={`${project.title} screenshot ${idx + 1}`}
+                            alt={`${project.title} - ${project.category} desenvolvido pela Vitrine Web (tela ${idx + 1})`}
                             className={`w-[30%] max-w-[200px] aspect-[9/16] object-contain rounded-xl md:rounded-2xl shadow-xl transform transition-all duration-500 ${
                               idx === 1 ? 'scale-110 z-10 -translate-y-4' : 'scale-95 opacity-70 hover:opacity-100 hover:scale-105'
                             }`}
@@ -324,7 +342,7 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
                     ) : (
                       <img  
                         src={project.image} 
-                        alt={project.title} 
+                        alt={`${project.title} - ${project.category} desenvolvido pela Vitrine Web`} 
                         className="parallax-img w-full h-full object-contain object-center p-4 md:p-8"
                       />
                     )}
