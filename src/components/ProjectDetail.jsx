@@ -40,9 +40,7 @@ const projectDetails = {
     client: 'Gestão Corporativa / RH',
     services: 'Sistema Web Completo, Dashboard Analítico, Arquitetura de Dados',
     technologies: 'React 18, TypeScript, Vite, Material UI (MUI v5), Firebase Auth, Cloud Firestore, React Hook Form, Yup',
-    aspect: 'aspect-video w-full',
-    demoUrl: 'https://cadastro-usuario-gilt.vercel.app/',
-    githubUrl: 'https://github.com/natanaelbalbo/CadastroUsuario'
+    aspect: 'aspect-video w-full'
   }
 };
 

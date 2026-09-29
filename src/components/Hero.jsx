@@ -32,14 +32,13 @@ export const Hero = () => {
       className="min-h-screen flex flex-col justify-center items-center px-4 md:px-12 lg:px-16 relative overflow-hidden"
     >
       <div className="max-w-[100rem] w-full relative z-10">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-xs md:text-sm uppercase tracking-widest font-semibold mb-8 opacity-80">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <div className="inline-flex items-center px-4 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-xs md:text-sm uppercase tracking-widest font-semibold mb-8 opacity-80">
           Empresa de Sistemas Web • Landing Pages • ERPs Sob Medida
         </div>
 
         <h1 
           ref={titleRef} 
-          className="text-6xl md:text-7xl lg:text-[7rem] font-extrabold tracking-tighter leading-none"
+          className="text-[2.8rem] sm:text-6xl md:text-7xl lg:text-[7rem] font-extrabold tracking-tighter leading-none"
         >
           Transformamos<br/>ideias em experiências<br/>digitais.
         </h1>
@@ -77,9 +76,9 @@ export const Hero = () => {
         </div>
       </div>
       
-      <div className="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center animate-bounce opacity-50">
+      <div className="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center opacity-50">
         <span className="text-sm tracking-widest uppercase mb-2">Scroll</span>
-        <div className="w-[1px] h-12 bg-current"></div>
+        <div className="scroll-line w-[1px] h-12 bg-current origin-top"></div>
       </div>
     </section>
   );

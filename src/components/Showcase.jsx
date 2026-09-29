@@ -48,6 +48,7 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
   const activeIdxRef = useRef(0);
   const prevBtnRef = useRef(null);
   const nextBtnRef = useRef(null);
+  const dotsRef = useRef([]);
 
   const scrollToIdx = (idx) => {
     if (!scrollTweenRef.current || !scrollTweenRef.current.scrollTrigger) return;
@@ -99,6 +100,11 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
           onUpdate: (self) => {
             const newIdx = Math.round(self.progress * (sections.length - 1));
             activeIdxRef.current = newIdx;
+
+            // Sync progress dots
+            dotsRef.current.forEach((dot, i) => {
+              if (dot) dot.style.opacity = i === newIdx ? '1' : '0.2';
+            });
             
             if (prevBtnRef.current) {
               const isStart = self.progress <= 0.05;
@@ -249,6 +255,25 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
       ref={containerRef} 
       className="w-full h-auto md:h-[100vh] overflow-x-hidden md:overflow-hidden relative"
     >
+      {/* Title "Projetos" Desktop */}
+      <div className="hidden md:flex absolute top-12 left-1/2 -translate-x-1/2 z-50 pointer-events-none items-center gap-3 opacity-60">
+        <span className="w-1.5 h-1.5 rounded-full bg-current"></span>
+        <span className="text-xs font-bold tracking-widest uppercase">Projetos</span>
+        <span className="w-1.5 h-1.5 rounded-full bg-current"></span>
+      </div>
+
+      {/* Progress Dots — Desktop Only */}
+      <div className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 gap-3 z-50">
+        {projects.map((_, i) => (
+          <div 
+            key={i} 
+            ref={el => dotsRef.current[i] = el}
+            className="w-2 h-2 rounded-full bg-current transition-opacity duration-300"
+            style={{ opacity: i === 0 ? 1 : 0.2 }}
+          />
+        ))}
+      </div>
+
       {/* Navigation Arrows (Desktop Only) */}
       <div className="hidden md:flex absolute top-1/2 -translate-y-1/2 w-full justify-between px-4 lg:px-8 pointer-events-none z-50">
         <button 
