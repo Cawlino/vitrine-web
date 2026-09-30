@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://vitrineweboficial.vercel.app/</loc>
+    <loc>https://agenciavitrineweb.vercel.app/</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://vitrineweboficial.vercel.app/logo-vitrine-web.png</image:loc>
+      <image:loc>https://agenciavitrineweb.vercel.app/logo-vitrine-web.png</image:loc>
       <image:title>Vitrine Web - Desenvolvimento de Sistemas Web, Landing Pages e ERPs</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://vitrineweboficial.vercel.app/#servicos</loc>
+    <loc>https://agenciavitrineweb.vercel.app/#servicos</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://vitrineweboficial.vercel.app/#projetos</loc>
+    <loc>https://agenciavitrineweb.vercel.app/#projetos</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://vitrineweboficial.vercel.app/#sobre-nos</loc>
+    <loc>https://agenciavitrineweb.vercel.app/#sobre-nos</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vitrineweboficial.vercel.app/#contato</loc>
+    <loc>https://agenciavitrineweb.vercel.app/#contato</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

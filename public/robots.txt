@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://vitrineweboficial.vercel.app/sitemap.xml
+Sitemap: https://agenciavitrineweb.vercel.app/sitemap.xml
