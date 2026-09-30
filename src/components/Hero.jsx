@@ -32,16 +32,16 @@ export const Hero = () => {
       className="min-h-screen flex flex-col justify-center items-center px-4 md:px-12 lg:px-16 relative overflow-hidden"
     >
       <div className="max-w-[100rem] w-full relative z-10">
-        <div className="inline-flex items-center px-4 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-xs md:text-sm uppercase tracking-widest font-semibold mb-8 opacity-80">
+        <h1 className="inline-flex items-center px-4 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-xs md:text-sm uppercase tracking-widest font-semibold mb-8 opacity-80">
           Empresa de Sistemas Web • Landing Pages • ERPs Sob Medida
-        </div>
+        </h1>
 
-        <h1 
+        <h2 
           ref={titleRef} 
           className="text-[2.8rem] sm:text-6xl md:text-7xl lg:text-[7rem] font-extrabold tracking-tighter leading-none"
         >
           Transformamos<br/>ideias em experiências<br/>digitais.
-        </h1>
+        </h2>
         <p 
           ref={subtitleRef} 
           className="mt-8 text-xl md:text-3xl max-w-3xl font-light opacity-80"
