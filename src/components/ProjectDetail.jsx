@@ -41,6 +41,16 @@ const projectDetails = {
     services: 'Sistema Web Completo, Dashboard Analítico, Arquitetura de Dados',
     technologies: 'React 18, TypeScript, Vite, Material UI (MUI v5), Firebase Auth, Cloud Firestore, React Hook Form, Yup',
     aspect: 'aspect-video w-full'
+  },
+  'junior-moveis': {
+    title: 'JÚNIOR',
+    subtitle: 'MÓVEIS',
+    image: '/junior-moveis.png',
+    description: 'Conquiste mais clientes e valorize o trabalho sob medida com uma Landing Page de altíssimo impacto. Desenvolvida para a marcenaria de móveis planejados JR Móveis em Maringá, a plataforma combina estética neo-brutalista moderna, prova social em destaque com avaliações 5 estrelas do Google, galeria de fotos de obras reais e um simulador interativo de projetos que qualifica e direciona os leads prontos para fechar negócio diretamente no WhatsApp.',
+    client: 'JR Móveis Planejados & Montagem',
+    services: 'Web Design, Landing Page de Alta Conversão, UI/UX',
+    technologies: 'HTML5, Tailwind CSS, JavaScript Moderno, AOS Animations',
+    aspect: 'aspect-video w-full'
   }
 };
 
