@@ -13,6 +13,7 @@ const projects = [
     description: 'Um ecossistema inteligente de alta performance com IA nativa. Desenvolvido para atuar como personal trainer virtual, elevando engajamento e retenção de usuários através de análise preditiva.',
     image: '/pacex-mobile.png',
     features: ['Aplicativo Nativo & Web', 'Treinador com IA Preditiva', 'Métricas de Retenção e Engajamento'],
+    liveUrl: 'https://pacexai.com',
   },
   {
     id: 'adventista-play',
@@ -21,6 +22,7 @@ const projects = [
     description: 'Plataforma educacional com gamificação avançada. Inspirado nos maiores líderes SaaS do mundo, maximiza o retorno contínuo dos usuários usando XP, lições modulares e sistema de ofensivas (streaks).',
     images: ['/adventista-mobile.jpg', '/adventista-mobile-2.jpg', '/adventista-mobile-3.jpg'],
     features: ['Sistemas Gamificados Sob Medida', 'Retenção e Recorrência SaaS', 'Lições Diárias Estruturadas'],
+    liveUrl: 'https://adventista-play.vercel.app/',
   },
   {
     id: 'dentista-cassiano',
@@ -29,6 +31,7 @@ const projects = [
     description: 'Landing page médica de altíssima conversão projetada para autoridade profissional. Captura leads qualificados via WhatsApp através de copywriting persuasivo e comparador visual interativo de resultados.',
     image: '/dentista-cassiano.png',
     features: ['Landing Page de Alta Conversão', 'Estratégia de Lead Capture WhatsApp', 'Credibilidade e UI de Alto Impacto'],
+    liveUrl: 'https://dr-cassiano-ortodontia.vercel.app',
   },
   {
     id: 'gestao-colaboradores',
@@ -45,6 +48,7 @@ const projects = [
     description: 'Landing page estratégica para marcenaria sob medida e móveis planejados. Projetada para máxima conversão com simulador de orçamentos interativo, galeria de obras reais e captação direta de leads no WhatsApp.',
     image: '/junior-moveis.png',
     features: ['Landing Page de Alta Conversão', 'Simulador de Orçamentos Interativo', 'Design Neo-brutalista & Obras Reais'],
+    liveUrl: 'https://jrmoveissobmedida.com.br',
   }
 ];
 
@@ -344,14 +348,30 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
                     </ul>
                   </div>
 
-                  <button 
-                    data-cursor="hover"
-                    onClick={() => onNavigate('project', project.id)}
-                    aria-label={`Ver estudo de caso completo do projeto ${project.title}`}
-                    className={`mt-4 md:mt-6 px-6 py-3 md:px-8 md:py-4 border border-current rounded-full uppercase tracking-widest text-xs md:text-sm hover:bg-[#1E293B] hover:text-[#F0F4F8] transition-colors duration-300 ${!isEven ? 'lg:ml-8' : ''}`}
-                  >
-                    Ver Estudo de Caso
-                  </button>
+                  <div className={`mt-4 md:mt-6 flex flex-col items-start gap-3 ${!isEven ? 'lg:ml-8' : ''}`}>
+                    <button 
+                      data-cursor="hover"
+                      onClick={() => onNavigate('project', project.id)}
+                      aria-label={`Ver estudo de caso completo do projeto ${project.title}`}
+                      className="px-6 py-3 md:px-8 md:py-4 border border-current rounded-full uppercase tracking-widest text-xs md:text-sm hover:bg-[#1E293B] hover:text-[#F0F4F8] transition-colors duration-300"
+                    >
+                      Ver Estudo de Caso
+                    </button>
+
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-cursor="hover"
+                        aria-label={`Visitar projeto ${project.title} online`}
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-[#1E293B] text-[#F0F4F8] rounded-full uppercase tracking-widest text-xs md:text-sm font-semibold hover:bg-black transition-all duration-300 shadow-md group"
+                      >
+                        <span>Visitar Projeto</span>
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 <div className={`w-full flex items-center justify-center ${isEven ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}`}>
