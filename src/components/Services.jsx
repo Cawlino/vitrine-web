@@ -197,18 +197,18 @@ export const Services = () => {
         className="w-full h-auto md:h-screen overflow-x-hidden md:overflow-hidden relative"
       >
         {/* Title "Serviços" Desktop */}
-        <div className="hidden md:flex absolute top-12 left-1/2 -translate-x-1/2 z-50 pointer-events-none items-center gap-3 opacity-60">
+        <div className="hidden md:flex absolute top-8 lg:top-12 left-1/2 -translate-x-1/2 z-50 pointer-events-none items-center gap-3 opacity-60">
           <span className="w-1.5 h-1.5 rounded-full bg-current"></span>
           <span className="text-xs font-bold tracking-widest uppercase">Serviços</span>
           <span className="w-1.5 h-1.5 rounded-full bg-current"></span>
         </div>
 
         {/* Navigation Arrows (Desktop Only) */}
-        <div className="hidden md:flex absolute top-1/2 -translate-y-1/2 w-full justify-between px-4 lg:px-8 pointer-events-none z-50">
+        <div className="hidden md:flex absolute top-1/2 -translate-y-1/2 w-full justify-between px-3 md:px-6 lg:px-8 pointer-events-none z-50">
           <button 
             ref={prevBtnRef}
             onClick={handlePrev}
-            className="opacity-0 -translate-x-4 pointer-events-none flex items-center justify-center gap-3 px-6 h-12 lg:h-14 rounded-full bg-white/20 backdrop-blur-xl border border-white/40 text-white shadow-2xl transition-all duration-300 hover:bg-white/40 hover:scale-105"
+            className="opacity-0 -translate-x-4 pointer-events-none flex items-center justify-center gap-3 px-5 lg:px-6 h-12 lg:h-14 rounded-full bg-white/20 backdrop-blur-xl border border-white/40 text-white shadow-2xl transition-all duration-300 hover:bg-white/40 hover:scale-105"
             aria-label="Serviço anterior"
             data-cursor="hover"
           >
@@ -218,7 +218,7 @@ export const Services = () => {
           <button 
             ref={nextBtnRef}
             onClick={handleNext}
-            className="opacity-100 translate-x-0 pointer-events-auto flex items-center justify-center gap-3 px-6 h-12 lg:h-14 rounded-full bg-white/20 backdrop-blur-xl border border-white/40 text-white shadow-2xl transition-all duration-300 hover:bg-white/40 hover:scale-105"
+            className="opacity-100 translate-x-0 pointer-events-auto flex items-center justify-center gap-3 px-5 lg:px-6 h-12 lg:h-14 rounded-full bg-white/20 backdrop-blur-xl border border-white/40 text-white shadow-2xl transition-all duration-300 hover:bg-white/40 hover:scale-105"
             aria-label="Próximo serviço"
             data-cursor="hover"
           >

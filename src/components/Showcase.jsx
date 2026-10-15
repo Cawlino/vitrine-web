@@ -16,6 +16,15 @@ const projects = [
     liveUrl: 'https://pacexai.com',
   },
   {
+    id: 'junior-moveis',
+    title: 'Júnior Móveis',
+    category: 'Landing Page de Alta Conversão',
+    description: 'Landing page estratégica para marcenaria sob medida e móveis planejados. Projetada para máxima conversão com simulador de orçamentos interativo, galeria de obras reais e captação direta de leads no WhatsApp.',
+    image: '/junior-moveis.png',
+    features: ['Landing Page de Alta Conversão', 'Simulador de Orçamentos Interativo', 'Design Neo-brutalista & Obras Reais'],
+    liveUrl: 'https://jrmoveissobmedida.com.br',
+  },
+  {
     id: 'adventista-play',
     title: 'Adventista Play',
     category: 'Plataforma SaaS & Gamificação',
@@ -40,15 +49,6 @@ const projects = [
     description: 'Sistema web corporativo completo para gestão de colaboradores, departamentos, permissões e dashboards analíticos. Solução técnica robusta que substitui planilhas com controle de atribuições em lote.',
     image: '/gestao-funcionarios.png',
     features: ['Sistema ERP Sob Medida', 'Dashboard Analítico & Métricas', 'Firebase Auth, Firestore & Permissões'],
-  },
-  {
-    id: 'junior-moveis',
-    title: 'Júnior Móveis',
-    category: 'Landing Page de Alta Conversão',
-    description: 'Landing page estratégica para marcenaria sob medida e móveis planejados. Projetada para máxima conversão com simulador de orçamentos interativo, galeria de obras reais e captação direta de leads no WhatsApp.',
-    image: '/junior-moveis.png',
-    features: ['Landing Page de Alta Conversão', 'Simulador de Orçamentos Interativo', 'Design Neo-brutalista & Obras Reais'],
-    liveUrl: 'https://jrmoveissobmedida.com.br',
   }
 ];
 

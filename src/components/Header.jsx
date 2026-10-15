@@ -18,7 +18,7 @@ export const Header = ({ onNavigate }) => {
     <>
       <div ref={containerRef}>
         {/* LAYER 1: Logo Only (No Blend Mode, purely visual) */}
-        <header className="fixed top-0 left-0 w-full z-40 px-6 py-6 flex justify-between items-center pointer-events-none">
+        <header className="fixed top-0 left-0 w-full z-40 px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 flex justify-between items-center pointer-events-none">
           <div className="flex items-center gap-0.5">
             <img 
               src="/logo-symbol.png" 
@@ -41,7 +41,7 @@ export const Header = ({ onNavigate }) => {
         </header>
 
         {/* LAYER 2: Text Only (Mix Blend Difference, handles clicks) */}
-        <header className={`fixed top-0 left-0 w-full ${isMenuOpen ? 'z-[60]' : 'z-50'} px-6 py-6 flex justify-between items-center mix-blend-difference text-white pointer-events-none transition-all duration-300`}>
+        <header className={`fixed top-0 left-0 w-full ${isMenuOpen ? 'z-[60]' : 'z-50'} px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 flex justify-between items-center mix-blend-difference text-white pointer-events-none transition-all duration-300`}>
           <div 
             className="flex items-center gap-0.5 group pointer-events-auto cursor-pointer"
             data-cursor="hover"
