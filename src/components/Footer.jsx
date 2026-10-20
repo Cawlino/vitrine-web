@@ -2,33 +2,33 @@ import React from 'react';
 
 export const Footer = ({ onNavigate }) => {
   return (
-    <footer id="contato" className="py-20 px-4 md:px-12 lg:px-16 w-full mt-20 border-t border-current border-opacity-10 overflow-hidden relative z-20">
+    <footer id="contato" className="py-16 sm:py-20 md:py-24 px-4 sm:px-8 md:px-12 lg:px-16 w-full mt-12 sm:mt-16 md:mt-20 border-t border-current border-opacity-10 overflow-hidden relative z-20">
       <div className="max-w-[100rem] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
         
-        <div className="flex-1">
-          <p className="text-sm font-bold tracking-widest uppercase mb-4 opacity-50">Tem um projeto em mente?</p>
+        <div className="flex-1 w-full">
+          <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-4 opacity-50">Tem um projeto em mente?</p>
           <img 
             src="/logo-symbol.png" 
             alt="Vitrine Web" 
-            className="h-12 md:h-16 w-auto object-contain mb-6"
+            className="h-10 md:h-16 w-auto object-contain mb-6"
           />
-          <h2 className="text-5xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none mb-10">
+          <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none mb-8 sm:mb-10">
             VAMOS<br/>CONVERSAR.
           </h2>
           <a 
             href="https://wa.me/554488680905" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-10 py-5 bg-[#1E293B] text-white font-bold uppercase tracking-widest text-sm md:text-base rounded-full hover:bg-black transition-colors duration-300"
+            className="inline-flex items-center justify-center px-8 py-4 sm:px-10 sm:py-5 bg-[#1E293B] text-white font-bold uppercase tracking-widest text-xs sm:text-sm md:text-base rounded-full hover:bg-black transition-colors duration-300 shadow-xl"
             data-cursor="hover"
           >
             Chamar no WhatsApp
           </a>
         </div>
         
-        <div className="flex flex-col items-end gap-10 text-sm tracking-widest uppercase font-medium">
+        <div className="flex flex-col items-start md:items-end gap-10 text-xs sm:text-sm tracking-widest uppercase font-medium w-full md:w-auto">
           
-          <div className="grid grid-cols-2 gap-x-12 gap-y-6 text-right">
+          <div className="grid grid-cols-2 gap-x-8 sm:gap-x-12 gap-y-6 text-left md:text-right w-full sm:w-auto">
             
             {/* Top-Left: LinkedIn */}
             <div className="relative group flex justify-end">
@@ -87,9 +87,15 @@ export const Footer = ({ onNavigate }) => {
 
           {/* Voltar ao Topo */}
           <div 
-            className="hover:opacity-50 transition-opacity uppercase block"
+            className="hover:opacity-50 transition-opacity uppercase block cursor-pointer"
             data-cursor="hover" 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => {
+              if (window.lenis) {
+                window.lenis.scrollTo(0, { duration: 1.5 });
+              } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
           >
             Voltar ao Topo ↑
           </div>

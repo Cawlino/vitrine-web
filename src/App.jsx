@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SmoothScrollProvider } from './components/SmoothScrollProvider';
 import { CustomCursor } from './components/CustomCursor';

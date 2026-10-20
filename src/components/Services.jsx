@@ -263,7 +263,7 @@ export const Services = () => {
             return (
               <div 
                 key={service.title}
-                className="service-slide relative w-full md:w-screen h-auto md:h-screen shrink-0 flex items-center justify-center px-4 py-16 md:py-0 md:px-12 lg:px-16 border-b border-white/5 md:border-none last:border-none"
+                className="service-slide relative w-full md:w-screen h-auto md:h-screen shrink-0 flex items-center justify-center px-4 py-16 md:py-0 md:px-16 lg:px-24 xl:px-32 border-b border-white/5 md:border-none last:border-none"
               >
                 <div className="max-w-[100rem] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 items-center relative">
                   
@@ -327,7 +327,7 @@ export const Services = () => {
                       }
                     }
                   }}
-                  className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 items-center justify-center gap-3 px-6 md:px-8 py-3 rounded-full bg-zinc-900/90 backdrop-blur-xl border border-white/10 text-white shadow-2xl hover:bg-zinc-800 transition-all duration-300 hover:scale-105 z-10"
+                  className="hidden md:flex absolute bottom-6 right-6 lg:right-12 items-center justify-center gap-3 px-5 md:px-6 py-2.5 md:py-3 rounded-full bg-zinc-900/90 backdrop-blur-xl border border-white/10 text-white shadow-2xl hover:bg-zinc-800 transition-all duration-300 hover:scale-105 z-20"
                   data-cursor="hover"
                   aria-label="Ir para a seção de Projetos"
                 >

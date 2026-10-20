@@ -66,11 +66,11 @@ export const About = () => {
   };
 
   return (
-    <section id="sobre-nos" ref={sectionRef} className="py-32 px-4 md:px-12 lg:px-16 w-full border-t border-current border-opacity-10 relative overflow-hidden">
+    <section id="sobre-nos" ref={sectionRef} className="py-20 sm:py-24 md:py-32 px-4 sm:px-8 md:px-12 lg:px-16 w-full border-t border-current border-opacity-10 relative overflow-hidden">
       <div className="max-w-[100rem] mx-auto">
         
-        <div className="mb-32">
-          <p className="text-sm font-bold tracking-widest uppercase mb-8 opacity-50">O Cérebro por trás da operação</p>
+        <div className="mb-16 sm:mb-24 md:mb-32">
+          <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-4 sm:mb-8 opacity-50">O Cérebro por trás da operação</p>
           <h2 
             ref={textRef} 
             className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight max-w-[70rem]"

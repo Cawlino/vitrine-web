@@ -321,7 +321,7 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
           return (
             <div 
               key={project.id} 
-              className="project-row relative w-full md:w-screen h-auto md:h-screen shrink-0 flex items-center justify-center px-4 py-24 md:py-0 md:pb-16 md:px-12 lg:px-16 border-b border-white/5 md:border-none last:border-none"
+              className="project-row relative w-full md:w-screen h-auto md:h-screen shrink-0 flex items-center justify-center px-4 py-24 md:py-0 md:pb-16 md:px-16 lg:px-24 xl:px-32 border-b border-white/5 md:border-none last:border-none"
             >
               <div className="max-w-[100rem] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
                 
