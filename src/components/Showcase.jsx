@@ -267,6 +267,7 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
       ref={containerRef} 
       className="w-full h-auto md:h-[100vh] overflow-x-hidden md:overflow-hidden relative"
     >
+      <h2 className="sr-only">Projetos e Estudos de Caso da Vitrine Web</h2>
       {/* Title "Projetos" Desktop */}
       <div className="hidden md:flex absolute top-12 left-1/2 -translate-x-1/2 z-50 pointer-events-none items-center gap-3 opacity-60">
         <span className="w-1.5 h-1.5 rounded-full bg-current"></span>
@@ -333,7 +334,7 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
                         {project.category}
                       </span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-tight">{project.title}</h2>
+                    <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-tight">{project.title}</h3>
                     <p className="text-base md:text-lg opacity-80 mb-8 leading-relaxed max-w-xl">
                       {project.description}
                     </p>
@@ -382,9 +383,7 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
                     {project.images ? (
                       <div className="w-full h-full flex items-center justify-center gap-2 md:gap-4 p-4 md:p-8 bg-zinc-800">
                         {project.images.map((img, idx) => (
-                          <img 
-                            key={idx} 
-                            src={img} 
+                          <img key={idx} src={img} loading="lazy" decoding="async" 
                             alt={`${project.title} - ${project.category} desenvolvido pela Vitrine Web (tela ${idx + 1})`}
                             className={`w-[30%] max-w-[200px] aspect-[9/16] object-contain rounded-xl md:rounded-2xl shadow-xl transform transition-all duration-500 ${
                               idx === 1 ? 'scale-110 z-10 -translate-y-4' : 'scale-95 opacity-70 hover:opacity-100 hover:scale-105'
@@ -393,8 +392,7 @@ export const Showcase = ({ onNavigate, returnToProjectId }) => {
                         ))}
                       </div>
                     ) : (
-                      <img  
-                        src={project.image} 
+                      <img src={project.image} loading="lazy" decoding="async" 
                         alt={`${project.title} - ${project.category} desenvolvido pela Vitrine Web`} 
                         className="parallax-img w-full h-full object-contain object-center p-4 md:p-8"
                       />

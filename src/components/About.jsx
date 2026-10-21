@@ -88,7 +88,7 @@ export const About = () => {
             >
               <img 
                 src="/daniel.jpg" 
-                alt="Daniel Barrionuevo" 
+                alt="Daniel Barrionuevo - Fundador e Tech Lead da Vitrine Web" loading="lazy" decoding="async" 
                 className="parallax-img absolute inset-[-10%] w-[120%] h-[120%] object-cover transition-all duration-700"
               />
             </HoverDeformImage>
@@ -110,7 +110,7 @@ export const About = () => {
             >
               <img 
                 src="/natanael.jpg" 
-                alt="Natanael Balbo" 
+                alt="Natanael Balbo - Fundador e Engenheiro de Software da Vitrine Web" loading="lazy" decoding="async" 
                 className="parallax-img absolute inset-[-10%] w-[120%] h-[120%] object-cover transition-all duration-700"
               />
             </HoverDeformImage>

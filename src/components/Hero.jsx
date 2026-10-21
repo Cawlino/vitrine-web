@@ -33,17 +33,17 @@ export const Hero = () => {
     >
       <div className="max-w-[100rem] w-full relative z-10 my-auto flex flex-col justify-center">
         <div className="mb-6 sm:mb-8 md:mb-10">
-          <h1 className="inline-flex items-center text-left text-[11px] sm:text-xs md:text-sm uppercase tracking-wider sm:tracking-widest font-semibold px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md opacity-85 leading-normal max-w-full">
+          <span className="inline-flex items-center text-left text-[11px] sm:text-xs md:text-sm uppercase tracking-wider sm:tracking-widest font-semibold px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md opacity-85 leading-normal max-w-full">
             Empresa de Sistemas Web • Landing Pages • ERPs Sob Medida
-          </h1>
+          </span>
         </div>
 
-        <h2 
+        <h1 
           ref={titleRef} 
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] 2xl:text-[6.8rem] font-extrabold tracking-tighter leading-[1.05] sm:leading-[1.02] md:leading-none"
         >
           Transformamos<br className="hidden sm:inline" /> ideias em experiências<br className="hidden sm:inline" /> digitais.
-        </h2>
+        </h1>
         <p 
           ref={subtitleRef} 
           className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl font-light opacity-80 leading-relaxed"
