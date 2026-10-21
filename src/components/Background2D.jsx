@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const Background2D = () => {
+export const Background2D = ({ watermarkText = "VITRINE WEB" }) => {
   const bgRef = useRef(null);
   const circle1Ref = useRef(null);
   const circle2Ref = useRef(null);
@@ -85,7 +85,7 @@ export const Background2D = () => {
           WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
         }}
       >
-        VITRINE WEB
+        {watermarkText}
       </div>
 
       {/* Blurry gradient circles */}
