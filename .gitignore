@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+# Secrets and Google Cloud Credentials
+*credentials*.json
+*service-account*.json
+google-credentials.json
+resolute-radar*.json
+.env
+.env.*
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
