@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { Background2D } from '../components/Background2D';
 import { SatelliteHeader } from '../components/satellite/SatelliteHeader';
+import { MobileWhatsAppFab } from '../components/satellite/MobileWhatsAppFab';
 import { Footer } from '../components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -183,20 +184,20 @@ export const ErpService = () => {
         {/* ================= HERO SECTION ================= */}
         <section
           ref={heroRef}
-          className="max-w-[100rem] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 pt-6 pb-20 md:pb-28"
+          className="max-w-[100rem] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 pt-4 sm:pt-6 pb-16 sm:pb-20 md:pb-28"
         >
           {/* Breadcrumb / Kicker */}
-          <div className="mb-6">
-            <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-widest px-4 py-2 rounded-full border border-slate-300/80 bg-white/80 text-slate-800 backdrop-blur-md shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-              Gestão Corporativa • Automação de Processos • Adeus Planilhas
+          <div className="mb-4 sm:mb-6">
+            <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider sm:tracking-widest px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-slate-300/80 bg-white/80 text-slate-800 backdrop-blur-md shadow-xs max-w-full">
+              <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse shrink-0"></span>
+              <span className="truncate sm:whitespace-normal">Gestão Corporativa • Automação de Processos • Adeus Planilhas</span>
             </span>
           </div>
 
           {/* Main Headline */}
           <h1
             ref={titleRef}
-            className="font-['Space_Grotesk'] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[1.05] text-[#1E293B] max-w-6xl"
+            className="font-['Space_Grotesk'] text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[1.08] sm:leading-[1.05] text-[#1E293B] max-w-6xl break-words"
           >
             O ERP que se adapta à sua empresa. <br className="hidden sm:inline" />
             <span className="text-slate-900 underline decoration-emerald-500/40 decoration-4">
@@ -207,7 +208,7 @@ export const ErpService = () => {
           {/* Subtitle */}
           <p
             ref={subtitleRef}
-            className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl lg:text-2xl font-light text-slate-700 max-w-4xl leading-relaxed"
+            className="mt-5 sm:mt-8 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-slate-700 max-w-4xl leading-relaxed"
           >
             Substitua dezenas de planilhas manuais, erros de digitação e softwares engessados por um
             sistema de gestão corporativa desenvolvido sob medida para a sua operação. Controle equipes,
@@ -217,13 +218,13 @@ export const ErpService = () => {
           {/* CTAs */}
           <div
             ref={ctaButtonsRef}
-            className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 max-w-xl"
+            className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 max-w-xl"
           >
             <a
               href="https://wa.me/554488680905?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20gratuita%20de%20um%20ERP%20sob%20medida."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-[#1E293B] text-white font-bold text-sm sm:text-base uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-xl text-center"
+              className="px-6 sm:px-8 py-3.5 sm:py-4 bg-[#1E293B] text-white font-bold text-xs sm:text-base uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-xl text-center min-h-[48px] flex items-center justify-center"
               data-cursor="hover"
             >
               Agendar Demonstração Gratuita
@@ -238,7 +239,7 @@ export const ErpService = () => {
                   document.querySelector('#modulos')?.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="px-8 py-4 border border-slate-300 text-slate-900 bg-white/70 hover:bg-white font-bold text-sm sm:text-base uppercase tracking-wider rounded-full transition-all hover:scale-105 text-center shadow-xs"
+              className="px-6 sm:px-8 py-3.5 sm:py-4 border border-slate-300 text-slate-900 bg-white/70 hover:bg-white font-bold text-xs sm:text-base uppercase tracking-wider rounded-full transition-all hover:scale-105 text-center shadow-xs min-h-[48px] flex items-center justify-center"
               data-cursor="hover"
             >
               Conhecer os Módulos
@@ -248,46 +249,46 @@ export const ErpService = () => {
           {/* Metrics Grid */}
           <div
             ref={metricsRef}
-            className="mt-14 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 border-t border-slate-300/80 pt-10"
+            className="mt-10 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 border-t border-slate-300/80 pt-8 sm:pt-10"
           >
-            <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/90 shadow-xs">
-              <div className="font-['Space_Grotesk'] text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E293B]">
+            <div className="bg-white/80 backdrop-blur-md p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs">
+              <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1E293B]">
                 -75%
               </div>
-              <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-2">
-                Erros Operacionais
+              <p className="text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-1.5 sm:mt-2">
+                Erros Manuais
               </p>
-              <p className="text-xs text-slate-500 mt-1 font-light">Fim do retrabalho com digitação manual</p>
+              <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 sm:mt-1 font-light leading-tight">Fim do retrabalho com planilhas</p>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/90 shadow-xs">
-              <div className="font-['Space_Grotesk'] text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E293B]">
+            <div className="bg-white/80 backdrop-blur-md p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs">
+              <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1E293B]">
                 3.2x
               </div>
-              <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-2">
-                Agilidade no Fechamento
+              <p className="text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-1.5 sm:mt-2">
+                Mais Agilidade
               </p>
-              <p className="text-xs text-slate-500 mt-1 font-light">Relatórios financeiros e DRE instantâneos</p>
+              <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 sm:mt-1 font-light leading-tight">Relatórios financeiros e DRE instantâneos</p>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/90 shadow-xs">
-              <div className="font-['Space_Grotesk'] text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E293B]">
+            <div className="bg-white/80 backdrop-blur-md p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs">
+              <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1E293B]">
                 100%
               </div>
-              <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-2">
-                Auditoria de Acessos
+              <p className="text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-1.5 sm:mt-2">
+                Auditoria Total
               </p>
-              <p className="text-xs text-slate-500 mt-1 font-light">Saiba quem editou ou acessou cada registro</p>
+              <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 sm:mt-1 font-light leading-tight">Rastreabilidade completa de ações</p>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/90 shadow-xs">
-              <div className="font-['Space_Grotesk'] text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E293B]">
+            <div className="bg-white/80 backdrop-blur-md p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs">
+              <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1E293B]">
                 Zero
               </div>
-              <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-2">
+              <p className="text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-1.5 sm:mt-2">
                 Planilhas Perdidas
               </p>
-              <p className="text-xs text-slate-500 mt-1 font-light">Toda a empresa conectada em nuvem</p>
+              <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 sm:mt-1 font-light leading-tight">Toda a empresa unificada em nuvem</p>
             </div>
           </div>
         </section>
@@ -360,41 +361,41 @@ export const ErpService = () => {
             </div>
 
             {/* Case: Gestão Corporativa */}
-            <div className="bg-white/80 backdrop-blur-md rounded-3xl border border-slate-200/90 p-8 sm:p-12 mb-12 shadow-sm">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-7 overflow-hidden rounded-2xl border border-slate-200 shadow-md">
+            <div className="bg-white/80 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-8 md:p-12 mb-8 sm:mb-12 shadow-sm">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+                <div className="lg:col-span-7 overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200 shadow-md">
                   <img
                     src="/gestao-funcionarios.png"
                     alt="Sistema de Gestão Corporativa e RH desenvolvido pela Vitrine Web"
-                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                    className="w-full max-h-[260px] sm:max-h-[380px] md:max-h-none object-cover hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
                 </div>
                 <div className="lg:col-span-5 flex flex-col justify-center">
-                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">
+                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1.5 sm:mb-2">
                     Departamento Pessoal & Operações
                   </span>
-                  <h3 className="font-['Space_Grotesk'] text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-4">
+                  <h3 className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1E293B] mb-3 sm:mb-4">
                     Plataforma de Gestão Corporativa
                   </h3>
-                  <p className="text-sm sm:text-base font-light text-slate-600 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-base font-light text-slate-600 leading-relaxed mb-5 sm:mb-6">
                     A empresa gerenciava mais de 120 colaboradores através de 14 planilhas isoladas no Excel,
                     enfrentando inconsistências financeiras e conflitos de dados. Desenvolvemos um ERP sob medida
                     que unificou todos os setores em tempo recorde.
                   </p>
 
-                  <div className="grid grid-cols-2 gap-4 mb-8">
-                    <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                      <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-emerald-600">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                    <div className="p-3 sm:p-4 bg-slate-50 rounded-xl border border-slate-200">
+                      <div className="font-['Space_Grotesk'] text-xl sm:text-2xl md:text-3xl font-extrabold text-emerald-600">
                         14 para 1
                       </div>
-                      <p className="text-xs text-slate-600 font-medium">Planilhas unificadas no sistema</p>
+                      <p className="text-[11px] sm:text-xs text-slate-600 font-medium">Planilhas unificadas</p>
                     </div>
-                    <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                      <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-blue-600">
+                    <div className="p-3 sm:p-4 bg-slate-50 rounded-xl border border-slate-200">
+                      <div className="font-['Space_Grotesk'] text-xl sm:text-2xl md:text-3xl font-extrabold text-blue-600">
                         100%
                       </div>
-                      <p className="text-xs text-slate-600 font-medium">Aderência aos processos internos</p>
+                      <p className="text-[11px] sm:text-xs text-slate-600 font-medium">Aderência aos processos</p>
                     </div>
                   </div>
 
@@ -402,7 +403,7 @@ export const ErpService = () => {
                     href="https://wa.me/554488680905?text=Ol%C3%A1!%20Vi%20o%20case%20de%20Gest%C3%A3o%20Corporativa%20e%20gostaria%20de%20automatizar%20minha%20empresa."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1E293B] text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-md w-full sm:w-auto"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1E293B] text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-md w-full sm:w-auto min-h-[48px]"
                     data-cursor="hover"
                   >
                     <span>Quero modernizar minha operação</span>
@@ -413,33 +414,33 @@ export const ErpService = () => {
             </div>
 
             {/* Case Secondary: Departamentos */}
-            <div className="bg-white/80 backdrop-blur-md rounded-3xl border border-slate-200/90 p-8 sm:p-12 shadow-sm">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="bg-white/80 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-8 md:p-12 shadow-sm">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
                 <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center">
-                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">
+                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1.5 sm:mb-2">
                     Controle Setorial & Permissões
                   </span>
-                  <h3 className="font-['Space_Grotesk'] text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-4">
+                  <h3 className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1E293B] mb-3 sm:mb-4">
                     Painel de Departamentos & Alçadas
                   </h3>
-                  <p className="text-sm sm:text-base font-light text-slate-600 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-base font-light text-slate-600 leading-relaxed mb-5 sm:mb-6">
                     Organização visual de filiais e centros de custo. Cada líder setorial visualiza apenas
                     as informações pertinentes ao seu departamento, preservando o sigilo de dados estratégicos
                     da diretoria com auditoria completa.
                   </p>
 
-                  <div className="grid grid-cols-2 gap-4 mb-8">
-                    <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                      <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-emerald-600">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                    <div className="p-3 sm:p-4 bg-slate-50 rounded-xl border border-slate-200">
+                      <div className="font-['Space_Grotesk'] text-xl sm:text-2xl md:text-3xl font-extrabold text-emerald-600">
                         100%
                       </div>
-                      <p className="text-xs text-slate-600 font-medium">Sigilo entre setores</p>
+                      <p className="text-[11px] sm:text-xs text-slate-600 font-medium">Sigilo entre setores</p>
                     </div>
-                    <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                      <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-blue-600">
+                    <div className="p-3 sm:p-4 bg-slate-50 rounded-xl border border-slate-200">
+                      <div className="font-['Space_Grotesk'] text-xl sm:text-2xl md:text-3xl font-extrabold text-blue-600">
                         1 Clique
                       </div>
-                      <p className="text-xs text-slate-600 font-medium">Para relatórios consolidados</p>
+                      <p className="text-[11px] sm:text-xs text-slate-600 font-medium">Relatórios consolidados</p>
                     </div>
                   </div>
 
@@ -447,7 +448,7 @@ export const ErpService = () => {
                     href="https://wa.me/554488680905?text=Ol%C3%A1!%20Gostaria%20de%20um%20ERP%20sob%20medida%20para%20minha%20empresa."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1E293B] text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-md w-full sm:w-auto"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1E293B] text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-md w-full sm:w-auto min-h-[48px]"
                     data-cursor="hover"
                   >
                     <span>Agendar demonstração no WhatsApp</span>
@@ -455,11 +456,11 @@ export const ErpService = () => {
                   </a>
                 </div>
 
-                <div className="lg:col-span-7 order-1 lg:order-2 overflow-hidden rounded-2xl border border-slate-200 shadow-md">
+                <div className="lg:col-span-7 order-1 lg:order-2 overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200 shadow-md">
                   <img
                     src="/gestao-departamentos.png"
                     alt="Painel de Departamentos desenvolvido pela Vitrine Web"
-                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                    className="w-full max-h-[260px] sm:max-h-[380px] md:max-h-none object-cover hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
                 </div>
@@ -469,18 +470,44 @@ export const ErpService = () => {
         </section>
 
         {/* ================= COMPARISON TABLE ================= */}
-        <section className="reveal-on-scroll py-20 sm:py-28 px-4 sm:px-8 md:px-12 lg:px-16 border-t border-slate-200/80 bg-white/40 backdrop-blur-xs">
+        <section className="reveal-on-scroll py-16 sm:py-28 px-4 sm:px-8 md:px-12 lg:px-16 border-t border-slate-200/80 bg-white/40 backdrop-blur-xs">
           <div className="max-w-[100rem] mx-auto">
-            <div className="max-w-3xl mb-14">
-              <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-3 text-emerald-600">
+            <div className="max-w-3xl mb-10 sm:mb-14">
+              <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-2 sm:mb-3 text-emerald-600">
                 Diagnóstico de Eficiência
               </p>
-              <h2 className="font-['Space_Grotesk'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1E293B] tracking-tight">
+              <h2 className="font-['Space_Grotesk'] text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1E293B] tracking-tight">
                 O custo invisível das planilhas vs ERP Sob Medida.
               </h2>
             </div>
 
-            <div className="overflow-x-auto rounded-3xl border border-slate-200/90 bg-white/90 backdrop-blur-md shadow-xs">
+            {/* Mobile-First Stacked Cards (< 768px) */}
+            <div className="space-y-4 md:hidden">
+              {comparisonData.map((row) => (
+                <div key={row.criteria} className="p-4 sm:p-5 rounded-2xl bg-white/95 border border-slate-200/90 shadow-xs">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
+                    {row.criteria}
+                  </p>
+                  <div className="p-3 bg-emerald-50/70 border border-emerald-200/80 rounded-xl mb-2.5">
+                    <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-900 mb-1">
+                      <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
+                      <span>ERP Sob Medida Vitrine Web</span>
+                    </div>
+                    <p className="text-xs font-semibold text-slate-900 leading-snug">{row.vitrine}</p>
+                  </div>
+                  <div className="p-3 bg-slate-100/70 border border-slate-200 rounded-xl">
+                    <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">
+                      <XCircle size={16} className="text-red-500 shrink-0" />
+                      <span>Planilhas Paralelas de Excel</span>
+                    </div>
+                    <p className="text-xs text-slate-600 leading-snug">{row.generic}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop Table (>= 768px) */}
+            <div className="hidden md:block overflow-x-auto rounded-3xl border border-slate-200/90 bg-white/90 backdrop-blur-md shadow-xs">
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50/70">
@@ -618,21 +645,21 @@ export const ErpService = () => {
         </section>
 
         {/* ================= BRUTALIST FINAL CTA ================= */}
-        <section className="reveal-on-scroll max-w-[100rem] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 py-20 sm:py-28">
-          <div className="rounded-3xl bg-[#1E293B] text-white p-10 sm:p-14 md:p-20 shadow-2xl relative overflow-hidden">
+        <section className="reveal-on-scroll max-w-[100rem] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-28">
+          <div className="rounded-2xl sm:rounded-3xl bg-[#1E293B] text-white p-6 sm:p-14 md:p-20 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full filter blur-3xl pointer-events-none" />
 
             <div className="max-w-4xl relative z-10">
-              <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold px-4 py-2 rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md mb-6">
+              <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-widest font-semibold px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md mb-4 sm:mb-6">
                 <Sparkles size={14} className="text-emerald-400" />
                 Diagnóstico Operacional Gratuito
               </span>
 
-              <h2 className="font-['Space_Grotesk'] text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+              <h2 className="font-['Space_Grotesk'] text-2xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4 sm:mb-6">
                 Pronto para aposentar as planilhas e ter o controle total da sua empresa?
               </h2>
 
-              <p className="text-slate-300 text-base sm:text-lg md:text-xl font-light mb-10 max-w-2xl leading-relaxed">
+              <p className="text-slate-300 text-sm sm:text-lg md:text-xl font-light mb-8 sm:mb-10 max-w-2xl leading-relaxed">
                 Agende uma conversa com os fundadores e Tech Leads da Vitrine Web para analisarmos os gargalos
                 da sua operação e demonstrar como o ERP sob medida transformará o seu negócio.
               </p>
@@ -642,7 +669,7 @@ export const ErpService = () => {
                   href="https://wa.me/554488680905?text=Ol%C3%A1!%20Quero%20agendar%20um%20diagn%C3%B3stico%20gratuito%20para%20minha%20empresa%20com%20um%20ERP%20sob%20medida."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-black font-extrabold text-sm uppercase tracking-widest rounded-full hover:bg-slate-100 transition-all hover:scale-105 shadow-2xl"
+                  className="inline-flex items-center justify-center gap-3 px-6 sm:px-10 py-4 sm:py-5 bg-white text-black font-extrabold text-xs sm:text-sm uppercase tracking-widest rounded-full hover:bg-slate-100 transition-all hover:scale-105 shadow-2xl min-h-[48px] w-full sm:w-auto"
                   data-cursor="hover"
                 >
                   <span>Agendar Demonstração no WhatsApp</span>
@@ -655,6 +682,7 @@ export const ErpService = () => {
       </main>
 
       <Footer onNavigate={handleSatelliteNavigate} />
+      <MobileWhatsAppFab serviceMessage="Ol%C3%A1!%20Quero%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20gratuita%20de%20um%20ERP%20sob%20medida%20para%20minha%20empresa." />
     </div>
   );
 };

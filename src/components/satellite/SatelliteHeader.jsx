@@ -16,6 +16,18 @@ export const SatelliteHeader = ({ currentSlug }) => {
     }
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { label: 'Início', href: '/' },
     {
@@ -91,11 +103,11 @@ export const SatelliteHeader = ({ currentSlug }) => {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-slate-800 hover:text-black rounded-lg focus:outline-none"
-              aria-label="Abrir menu"
+              className="lg:hidden p-3 min-w-[48px] min-h-[48px] flex items-center justify-center text-slate-800 hover:text-black rounded-lg focus:outline-none"
+              aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
               data-cursor="hover"
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
             </button>
           </div>
         </header>
@@ -103,15 +115,15 @@ export const SatelliteHeader = ({ currentSlug }) => {
 
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-[#0F172A]/95 backdrop-blur-2xl flex flex-col justify-center items-center px-6 pointer-events-auto">
-          <nav className="flex flex-col gap-6 text-center">
+        <div className="fixed inset-0 z-40 bg-[#0F172A]/95 backdrop-blur-2xl overflow-y-auto flex flex-col justify-start sm:justify-center items-center py-28 px-6 pointer-events-auto">
+          <nav className="flex flex-col gap-5 text-center w-full max-w-sm">
             {navLinks.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-2xl font-bold uppercase tracking-wider ${
-                  item.active ? 'text-white underline decoration-2' : 'text-slate-300 hover:text-white'
+                className={`text-xl sm:text-2xl font-bold uppercase tracking-wider py-2.5 transition-colors ${
+                  item.active ? 'text-white underline decoration-2 underline-offset-8' : 'text-slate-300 hover:text-white'
                 }`}
               >
                 {item.label}
@@ -122,7 +134,7 @@ export const SatelliteHeader = ({ currentSlug }) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="mt-6 inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#0F172A] font-extrabold text-sm uppercase tracking-wider rounded-full hover:bg-slate-100 transition-transform shadow-xl"
+              className="mt-6 inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#0F172A] font-extrabold text-sm uppercase tracking-wider rounded-full hover:bg-slate-100 transition-transform shadow-xl min-h-[48px]"
             >
               <span>Falar no WhatsApp</span>
               <ArrowUpRight size={16} />

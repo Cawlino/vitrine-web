@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { Background2D } from '../components/Background2D';
 import { SatelliteHeader } from '../components/satellite/SatelliteHeader';
+import { MobileWhatsAppFab } from '../components/satellite/MobileWhatsAppFab';
 import { Footer } from '../components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -185,20 +186,20 @@ export const LandingPageService = () => {
         {/* ================= HERO SECTION ================= */}
         <section
           ref={heroRef}
-          className="max-w-[100rem] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 pt-6 pb-20 md:pb-28"
+          className="max-w-[100rem] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 pt-4 sm:pt-6 pb-16 sm:pb-20 md:pb-28"
         >
           {/* Breadcrumb / Kicker */}
-          <div className="mb-6">
-            <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-widest px-4 py-2 rounded-full border border-slate-300/80 bg-white/80 text-slate-800 backdrop-blur-md shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-              Engenharia de Conversão • ROI Máximo • PageSpeed 95+
+          <div className="mb-4 sm:mb-6">
+            <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider sm:tracking-widest px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-slate-300/80 bg-white/80 text-slate-800 backdrop-blur-md shadow-xs max-w-full">
+              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse shrink-0"></span>
+              <span className="truncate sm:whitespace-normal">Engenharia de Conversão • ROI Máximo • PageSpeed 95+</span>
             </span>
           </div>
 
           {/* Main Headline */}
           <h1
             ref={titleRef}
-            className="font-['Space_Grotesk'] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[1.05] text-[#1E293B] max-w-6xl"
+            className="font-['Space_Grotesk'] text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[1.08] sm:leading-[1.05] text-[#1E293B] max-w-6xl break-words"
           >
             Landing pages que transformam <br className="hidden sm:inline" />
             <span className="text-slate-900 underline decoration-blue-500/40 decoration-4">
@@ -209,7 +210,7 @@ export const LandingPageService = () => {
           {/* Subtitle */}
           <p
             ref={subtitleRef}
-            className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl lg:text-2xl font-light text-slate-700 max-w-4xl leading-relaxed"
+            className="mt-5 sm:mt-8 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-slate-700 max-w-4xl leading-relaxed"
           >
             Chega de templates genéricos e sites lentos que queimam seu investimento em anúncios.
             Desenhamos experiências digitais sob medida com carregamento sub-1.2s, copywriting
@@ -219,13 +220,13 @@ export const LandingPageService = () => {
           {/* CTAs */}
           <div
             ref={ctaButtonsRef}
-            className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 max-w-xl"
+            className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 max-w-xl"
           >
             <a
               href="https://wa.me/554488680905?text=Ol%C3%A1!%20Gostaria%20de%20um%20diagn%C3%B3stico%20gratuito%20para%20uma%20Landing%20Page%20de%20alta%20convers%C3%A3o."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-[#1E293B] text-white font-bold text-sm sm:text-base uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-xl text-center"
+              className="px-6 sm:px-8 py-3.5 sm:py-4 bg-[#1E293B] text-white font-bold text-xs sm:text-base uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-xl text-center min-h-[48px] flex items-center justify-center"
               data-cursor="hover"
             >
               Solicitar Diagnóstico Gratuito
@@ -240,7 +241,7 @@ export const LandingPageService = () => {
                   document.querySelector('#cases')?.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="px-8 py-4 border border-slate-300 text-slate-900 bg-white/70 hover:bg-white font-bold text-sm sm:text-base uppercase tracking-wider rounded-full transition-all hover:scale-105 text-center shadow-xs"
+              className="px-6 sm:px-8 py-3.5 sm:py-4 border border-slate-300 text-slate-900 bg-white/70 hover:bg-white font-bold text-xs sm:text-base uppercase tracking-wider rounded-full transition-all hover:scale-105 text-center shadow-xs min-h-[48px] flex items-center justify-center"
               data-cursor="hover"
             >
               Ver Cases Reais
@@ -250,46 +251,46 @@ export const LandingPageService = () => {
           {/* Metrics Grid */}
           <div
             ref={metricsRef}
-            className="mt-14 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 border-t border-slate-300/80 pt-10"
+            className="mt-10 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 border-t border-slate-300/80 pt-8 sm:pt-10"
           >
-            <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/90 shadow-xs">
-              <div className="font-['Space_Grotesk'] text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E293B]">
+            <div className="bg-white/80 backdrop-blur-md p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs">
+              <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1E293B]">
                 &lt; 1.2s
               </div>
-              <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-2">
-                Tempo de Carregamento
+              <p className="text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-1.5 sm:mt-2">
+                Carregamento
               </p>
-              <p className="text-xs text-slate-500 mt-1 font-light">Zero perda de leads por lentidão</p>
+              <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 sm:mt-1 font-light leading-tight">Zero perda de leads por lentidão</p>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/90 shadow-xs">
-              <div className="font-['Space_Grotesk'] text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E293B]">
+            <div className="bg-white/80 backdrop-blur-md p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs">
+              <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1E293B]">
                 95+
               </div>
-              <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-2">
+              <p className="text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-1.5 sm:mt-2">
                 PageSpeed Score
               </p>
-              <p className="text-xs text-slate-500 mt-1 font-light">Nota máxima nos critérios do Google</p>
+              <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 sm:mt-1 font-light leading-tight">Nota máxima nos critérios do Google</p>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/90 shadow-xs">
-              <div className="font-['Space_Grotesk'] text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E293B]">
+            <div className="bg-white/80 backdrop-blur-md p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs">
+              <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1E293B]">
                 3.8x
               </div>
-              <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-2">
-                Taxa de Conversão
+              <p className="text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-1.5 sm:mt-2">
+                Conversão Média
               </p>
-              <p className="text-xs text-slate-500 mt-1 font-light">Comparado a sites comuns e WordPress</p>
+              <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 sm:mt-1 font-light leading-tight">Comparado a sites comuns e WordPress</p>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/90 shadow-xs">
-              <div className="font-['Space_Grotesk'] text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E293B]">
+            <div className="bg-white/80 backdrop-blur-md p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs">
+              <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1E293B]">
                 100%
               </div>
-              <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-2">
-                Foco em WhatsApp & CRM
+              <p className="text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-slate-600 mt-1.5 sm:mt-2">
+                WhatsApp & CRM
               </p>
-              <p className="text-xs text-slate-500 mt-1 font-light">Leads quentes e prontos para fechar</p>
+              <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 sm:mt-1 font-light leading-tight">Leads quentes e prontos para fechar</p>
             </div>
           </div>
         </section>
@@ -363,41 +364,41 @@ export const LandingPageService = () => {
             </div>
 
             {/* Case 1: Junior Móveis */}
-            <div className="bg-white/80 backdrop-blur-md rounded-3xl border border-slate-200/90 p-8 sm:p-12 mb-12 shadow-sm">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-7 overflow-hidden rounded-2xl border border-slate-200 shadow-md">
+            <div className="bg-white/80 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-8 md:p-12 mb-8 sm:mb-12 shadow-sm">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+                <div className="lg:col-span-7 overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200 shadow-md">
                   <img
                     src="/junior-moveis.png"
                     alt="Landing Page Junior Móveis Sob Medida desenvolvida pela Vitrine Web"
-                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                    className="w-full max-h-[260px] sm:max-h-[380px] md:max-h-none object-cover hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
                 </div>
                 <div className="lg:col-span-5 flex flex-col justify-center">
-                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">
+                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1.5 sm:mb-2">
                     Móveis Planejados & Decoração
                   </span>
-                  <h3 className="font-['Space_Grotesk'] text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-4">
+                  <h3 className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1E293B] mb-3 sm:mb-4">
                     Junior Móveis Planejados
                   </h3>
-                  <p className="text-sm sm:text-base font-light text-slate-600 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-base font-light text-slate-600 leading-relaxed mb-5 sm:mb-6">
                     Redesenhamos a experiência completa de geração de orçamentos para uma das marcenarias
                     mais tradicionais da região. A página antiga sofria com lentidão no celular e baixa
                     conversão dos anúncios do Google Ads.
                   </p>
 
-                  <div className="grid grid-cols-2 gap-4 mb-8">
-                    <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                      <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-blue-600">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                    <div className="p-3 sm:p-4 bg-slate-50 rounded-xl border border-slate-200">
+                      <div className="font-['Space_Grotesk'] text-xl sm:text-2xl md:text-3xl font-extrabold text-blue-600">
                         -42%
                       </div>
-                      <p className="text-xs text-slate-600 font-medium">No custo por lead (CPL)</p>
+                      <p className="text-[11px] sm:text-xs text-slate-600 font-medium">No custo por lead (CPL)</p>
                     </div>
-                    <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                      <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-emerald-600">
+                    <div className="p-3 sm:p-4 bg-slate-50 rounded-xl border border-slate-200">
+                      <div className="font-['Space_Grotesk'] text-xl sm:text-2xl md:text-3xl font-extrabold text-emerald-600">
                         +210%
                       </div>
-                      <p className="text-xs text-slate-600 font-medium">Mais orçamentos via WhatsApp</p>
+                      <p className="text-[11px] sm:text-xs text-slate-600 font-medium">Mais orçamentos via WhatsApp</p>
                     </div>
                   </div>
 
@@ -405,7 +406,7 @@ export const LandingPageService = () => {
                     href="https://wa.me/554488680905?text=Ol%C3%A1!%20Vi%20o%20case%20da%20Junior%20M%C3%B3veis%20e%20gostaria%20de%20algo%20semelhante%20para%20minha%20empresa."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1E293B] text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-md w-full sm:w-auto"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1E293B] text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-md w-full sm:w-auto min-h-[48px]"
                     data-cursor="hover"
                   >
                     <span>Quero um resultado como esse</span>
@@ -416,33 +417,33 @@ export const LandingPageService = () => {
             </div>
 
             {/* Case 2: Clínica Odontológica */}
-            <div className="bg-white/80 backdrop-blur-md rounded-3xl border border-slate-200/90 p-8 sm:p-12 shadow-sm">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="bg-white/80 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-8 md:p-12 shadow-sm">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
                 <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center">
-                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">
+                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1.5 sm:mb-2">
                     Saúde & Estética Odontológica
                   </span>
-                  <h3 className="font-['Space_Grotesk'] text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-4">
+                  <h3 className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1E293B] mb-3 sm:mb-4">
                     Dr. Cassiano Odontologia
                   </h3>
-                  <p className="text-sm sm:text-base font-light text-slate-600 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-base font-light text-slate-600 leading-relaxed mb-5 sm:mb-6">
                     Landing page desenvolvida para captação de pacientes de implantes e lentes de contato
                     dental. Layout minimalista, prova social destacada e fluxo de agendamento ágil direto
                     para a recepção da clínica.
                   </p>
 
-                  <div className="grid grid-cols-2 gap-4 mb-8">
-                    <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                      <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-blue-600">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                    <div className="p-3 sm:p-4 bg-slate-50 rounded-xl border border-slate-200">
+                      <div className="font-['Space_Grotesk'] text-xl sm:text-2xl md:text-3xl font-extrabold text-blue-600">
                         0.9s
                       </div>
-                      <p className="text-xs text-slate-600 font-medium">Carregamento no 4G mobile</p>
+                      <p className="text-[11px] sm:text-xs text-slate-600 font-medium">Carregamento no 4G mobile</p>
                     </div>
-                    <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                      <div className="font-['Space_Grotesk'] text-2xl sm:text-3xl font-extrabold text-emerald-600">
+                    <div className="p-3 sm:p-4 bg-slate-50 rounded-xl border border-slate-200">
+                      <div className="font-['Space_Grotesk'] text-xl sm:text-2xl md:text-3xl font-extrabold text-emerald-600">
                         18 leads/dia
                       </div>
-                      <p className="text-xs text-slate-600 font-medium">Média durante campanhas ativas</p>
+                      <p className="text-[11px] sm:text-xs text-slate-600 font-medium">Média durante campanhas ativas</p>
                     </div>
                   </div>
 
@@ -450,7 +451,7 @@ export const LandingPageService = () => {
                     href="https://wa.me/554488680905?text=Ol%C3%A1!%20Gostaria%20de%20uma%20Landing%20Page%20para%20minha%20cl%C3%ADnica%2Fempresa."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1E293B] text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-md w-full sm:w-auto"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1E293B] text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-md w-full sm:w-auto min-h-[48px]"
                     data-cursor="hover"
                   >
                     <span>Conversar sobre meu projeto</span>
@@ -458,11 +459,11 @@ export const LandingPageService = () => {
                   </a>
                 </div>
 
-                <div className="lg:col-span-7 order-1 lg:order-2 overflow-hidden rounded-2xl border border-slate-200 shadow-md">
+                <div className="lg:col-span-7 order-1 lg:order-2 overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200 shadow-md">
                   <img
                     src="/dentista-cassiano.png"
                     alt="Landing Page Odontologia desenvolvida pela Vitrine Web"
-                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                    className="w-full max-h-[260px] sm:max-h-[380px] md:max-h-none object-cover hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
                 </div>
@@ -472,18 +473,44 @@ export const LandingPageService = () => {
         </section>
 
         {/* ================= COMPARISON TABLE ================= */}
-        <section className="reveal-on-scroll py-20 sm:py-28 px-4 sm:px-8 md:px-12 lg:px-16 border-t border-slate-200/80 bg-white/40 backdrop-blur-xs">
+        <section className="reveal-on-scroll py-16 sm:py-28 px-4 sm:px-8 md:px-12 lg:px-16 border-t border-slate-200/80 bg-white/40 backdrop-blur-xs">
           <div className="max-w-[100rem] mx-auto">
-            <div className="max-w-3xl mb-14">
-              <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-3 text-blue-600">
+            <div className="max-w-3xl mb-10 sm:mb-14">
+              <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-2 sm:mb-3 text-blue-600">
                 Comparativo Técnico
               </p>
-              <h2 className="font-['Space_Grotesk'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1E293B] tracking-tight">
+              <h2 className="font-['Space_Grotesk'] text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1E293B] tracking-tight">
                 Por que soluções amadoras queimam seu dinheiro em anúncios.
               </h2>
             </div>
 
-            <div className="overflow-x-auto rounded-3xl border border-slate-200/90 bg-white/90 backdrop-blur-md shadow-xs">
+            {/* Mobile-First Stacked Cards (< 768px) */}
+            <div className="space-y-4 md:hidden">
+              {comparisonData.map((row) => (
+                <div key={row.criteria} className="p-4 sm:p-5 rounded-2xl bg-white/95 border border-slate-200/90 shadow-xs">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
+                    {row.criteria}
+                  </p>
+                  <div className="p-3 bg-blue-50/70 border border-blue-200/80 rounded-xl mb-2.5">
+                    <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-900 mb-1">
+                      <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
+                      <span>Engenharia Vitrine Web</span>
+                    </div>
+                    <p className="text-xs font-semibold text-slate-900 leading-snug">{row.vitrine}</p>
+                  </div>
+                  <div className="p-3 bg-slate-100/70 border border-slate-200 rounded-xl">
+                    <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">
+                      <XCircle size={16} className="text-red-500 shrink-0" />
+                      <span>Sites & Landing Pages Comuns</span>
+                    </div>
+                    <p className="text-xs text-slate-600 leading-snug">{row.generic}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop Table (>= 768px) */}
+            <div className="hidden md:block overflow-x-auto rounded-3xl border border-slate-200/90 bg-white/90 backdrop-blur-md shadow-xs">
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50/70">
@@ -621,22 +648,22 @@ export const LandingPageService = () => {
         </section>
 
         {/* ================= BRUTALIST FINAL CTA ================= */}
-        <section className="reveal-on-scroll max-w-[100rem] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 py-20 sm:py-28">
-          <div className="rounded-3xl bg-[#1E293B] text-white p-10 sm:p-14 md:p-20 shadow-2xl relative overflow-hidden">
+        <section className="reveal-on-scroll max-w-[100rem] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-28">
+          <div className="rounded-2xl sm:rounded-3xl bg-[#1E293B] text-white p-6 sm:p-14 md:p-20 shadow-2xl relative overflow-hidden">
             {/* Ambient blur glow */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl pointer-events-none" />
 
             <div className="max-w-4xl relative z-10">
-              <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold px-4 py-2 rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md mb-6">
+              <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-widest font-semibold px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md mb-4 sm:mb-6">
                 <Sparkles size={14} className="text-blue-400" />
                 Diagnóstico de Conversão Gratuito
               </span>
 
-              <h2 className="font-['Space_Grotesk'] text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+              <h2 className="font-['Space_Grotesk'] text-2xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4 sm:mb-6">
                 Pronto para parar de perder vendas e multiplicar seus leads?
               </h2>
 
-              <p className="text-slate-300 text-base sm:text-lg md:text-xl font-light mb-10 max-w-2xl leading-relaxed">
+              <p className="text-slate-300 text-sm sm:text-lg md:text-xl font-light mb-8 sm:mb-10 max-w-2xl leading-relaxed">
                 Converse agora mesmo com os fundadores e Tech Leads da Vitrine Web. Vamos analisar seu
                 nicho e desenhar a estratégia ideal para sua empresa.
               </p>
@@ -646,7 +673,7 @@ export const LandingPageService = () => {
                   href="https://wa.me/554488680905?text=Ol%C3%A1!%20Quero%20uma%20Landing%20Page%20de%20Alta%20Convers%C3%A3o%20para%20minha%20empresa."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-black font-extrabold text-sm uppercase tracking-widest rounded-full hover:bg-slate-100 transition-all hover:scale-105 shadow-2xl"
+                  className="inline-flex items-center justify-center gap-3 px-6 sm:px-10 py-4 sm:py-5 bg-white text-black font-extrabold text-xs sm:text-sm uppercase tracking-widest rounded-full hover:bg-slate-100 transition-all hover:scale-105 shadow-2xl min-h-[48px] w-full sm:w-auto"
                   data-cursor="hover"
                 >
                   <span>Chamar Especialista no WhatsApp</span>
@@ -659,6 +686,7 @@ export const LandingPageService = () => {
       </main>
 
       <Footer onNavigate={handleSatelliteNavigate} />
+      <MobileWhatsAppFab serviceMessage="Ol%C3%A1!%20Gostaria%20de%20um%20diagn%C3%B3stico%20gratuito%20para%20uma%20Landing%20Page%20de%20alta%20convers%C3%A3o." />
     </div>
   );
 };
