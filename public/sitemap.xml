@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Página Inicial -->
   <url>
     <loc>https://agenciavitrineweb.com.br/</loc>
     <lastmod>2026-10-20</lastmod>
@@ -11,25 +12,45 @@
       <image:title>Vitrine Web - Sistemas Web, Landing Pages e ERPs Sob Medida</image:title>
       <image:caption>Vitrine Web: Desenvolvimento de sistemas web, landing pages de alta conversão e ERPs corporativos no Brasil.</image:caption>
     </image:image>
+  </url>
+
+  <!-- Página Satélite 1: Criação de Landing Pages -->
+  <url>
+    <loc>https://agenciavitrineweb.com.br/criacao-de-landing-page/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <image:image>
-      <image:loc>https://agenciavitrineweb.com.br/pacex.png</image:loc>
-      <image:title>PaceX AI - Sistema Web e Inteligência Artificial</image:title>
-      <image:caption>Plataforma inteligente desenvolvida pela Vitrine Web com ecossistema de alta performance e IA nativa.</image:caption>
+      <image:loc>https://agenciavitrineweb.com.br/dentista-cassiano.png</image:loc>
+      <image:title>Landing Page Dr. Cassiano - Odontologia de Alta Conversão</image:title>
     </image:image>
     <image:image>
       <image:loc>https://agenciavitrineweb.com.br/junior-moveis.png</image:loc>
-      <image:title>Landing Page de Alta Conversão - Júnior Móveis Sob Medida</image:title>
-      <image:caption>Landing page com simulador de orçamentos e captação de leads qualificados para WhatsApp.</image:caption>
+      <image:title>Landing Page Júnior Móveis Sob Medida</image:title>
     </image:image>
+  </url>
+
+  <!-- Página Satélite 2: Desenvolvimento de Sistemas Web -->
+  <url>
+    <loc>https://agenciavitrineweb.com.br/desenvolvimento-de-sistemas-web/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://agenciavitrineweb.com.br/pacex.png</image:loc>
+      <image:title>PaceX AI - Sistema Web e Inteligência Artificial</image:title>
+    </image:image>
+  </url>
+
+  <!-- Página Satélite 3: Sistema ERP Sob Medida -->
+  <url>
+    <loc>https://agenciavitrineweb.com.br/sistema-erp-sob-medida/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <image:image>
       <image:loc>https://agenciavitrineweb.com.br/gestao-funcionarios.png</image:loc>
-      <image:title>Sistema ERP Sob Medida - Gestão Corporativa e Colaboradores</image:title>
-      <image:caption>Sistema web corporativo para gestão de colaboradores, departamentos e dashboards analíticos.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://agenciavitrineweb.com.br/dentista-cassiano.png</image:loc>
-      <image:title>Landing Page de Alta Conversão Médica e Odontológica - Dr. Cassiano</image:title>
-      <image:caption>Landing page médica focada em autoridade e captação de pacientes de alto valor.</image:caption>
+      <image:title>Sistema ERP Sob Medida e Gestão Corporativa</image:title>
     </image:image>
   </url>
 </urlset>

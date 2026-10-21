@@ -21,6 +21,12 @@
     }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/criacao-de-landing-page", "destination": "/criacao-de-landing-page/index.html" },
+    { "source": "/criacao-de-landing-page/(.*)", "destination": "/criacao-de-landing-page/index.html" },
+    { "source": "/desenvolvimento-de-sistemas-web", "destination": "/desenvolvimento-de-sistemas-web/index.html" },
+    { "source": "/desenvolvimento-de-sistemas-web/(.*)", "destination": "/desenvolvimento-de-sistemas-web/index.html" },
+    { "source": "/sistema-erp-sob-medida", "destination": "/sistema-erp-sob-medida/index.html" },
+    { "source": "/sistema-erp-sob-medida/(.*)", "destination": "/sistema-erp-sob-medida/index.html" },
+    { "source": "/((?!assets/|.*\\..*).*)", "destination": "/index.html" }
   ]
 }

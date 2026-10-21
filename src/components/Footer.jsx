@@ -105,9 +105,15 @@ export const Footer = ({ onNavigate }) => {
       </div>
 
       {/* SEO Footer Bar */}
-      <div className="max-w-[100rem] mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-50 tracking-wider">
+      <div className="max-w-[100rem] mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-60 tracking-wider">
         <p>© {new Date().getFullYear()} Vitrine Web. Desenvolvimento de Sistemas Web, Landing Pages de Alta Conversão e ERPs Sob Medida.</p>
-        <p>Projetado para máxima performance e presença online.</p>
+        <div className="flex flex-wrap items-center justify-center gap-4 text-[11px]">
+          <a href="/criacao-de-landing-page/" className="hover:text-white transition-colors underline decoration-white/20 underline-offset-4">Criação de Landing Pages</a>
+          <span className="opacity-30">•</span>
+          <a href="/desenvolvimento-de-sistemas-web/" className="hover:text-white transition-colors underline decoration-white/20 underline-offset-4">Sistemas Web Sob Medida</a>
+          <span className="opacity-30">•</span>
+          <a href="/sistema-erp-sob-medida/" className="hover:text-white transition-colors underline decoration-white/20 underline-offset-4">Sistemas ERP Corporativos</a>
+        </div>
       </div>
     </footer>
   );
