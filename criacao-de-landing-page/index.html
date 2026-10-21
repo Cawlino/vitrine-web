@@ -7,6 +7,9 @@
     <link rel="apple-touch-icon" href="/favicon.png" />
     <link rel="manifest" href="/manifest.json" />
 
+    <!-- Verificação do Google Search Console -->
+    <meta name="google-site-verification" content="SVr1oZ6awQ9538sn_Rq-yeU2cJm1QrrG0bZyy2k_OOw" />
+
     <!-- SEO Primário -->
     <title>Criação de Landing Pages de Alta Conversão | Vitrine Web</title>
     <meta
@@ -20,7 +23,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://agenciavitrineweb.com.br/criacao-de-landing-page" />
 
-    <!-- Open Graph / Redes Sociais -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:url" content="https://agenciavitrineweb.com.br/criacao-de-landing-page" />
@@ -41,11 +44,11 @@
     />
     <meta name="twitter:image" content="https://agenciavitrineweb.com.br/junior-moveis.png" />
 
-    <meta name="theme-color" content="#0F172A" />
+    <meta name="theme-color" content="#F0F4F8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/index.css" />
@@ -67,20 +70,7 @@
               "image": "https://agenciavitrineweb.com.br/logo-vitrine-web.png"
             },
             "description": "Desenvolvimento de landing pages personalizadas de alta performance com design exclusivo, carregamento instantâneo e integração direta ao WhatsApp.",
-            "areaServed": "BR",
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Planos de Landing Pages",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Landing Page Premium de Conversão"
-                  }
-                }
-              ]
-            }
+            "areaServed": "BR"
           },
           {
             "@type": "FAQPage",
@@ -125,25 +115,35 @@
     </script>
   </head>
 
-  <body class="bg-[#0B0F19] text-[#F1F5F9] font-['Inter',sans-serif] antialiased selection:bg-white selection:text-black min-h-screen">
+  <body class="bg-[#F0F4F8] text-[#1E293B] font-['Inter',sans-serif] antialiased min-h-screen selection:bg-[#1E293B] selection:text-white relative">
     
-    <!-- Top Bar Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#0B0F19]/80 backdrop-blur-xl border-b border-white/10 px-6 py-4">
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="custom-cursor hidden md:block"></div>
+
+    <!-- Soft Background Gradients -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+      <div class="grain-overlay absolute inset-0 z-10 opacity-[0.03]"></div>
+      <div class="absolute top-[-5%] left-[-5%] w-[45vw] h-[45vw] bg-blue-200/50 rounded-full filter blur-[120px]"></div>
+      <div class="absolute bottom-[-10%] right-[-5%] w-[50vw] h-[50vw] bg-indigo-200/40 rounded-full filter blur-[140px]"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#F0F4F8]/85 backdrop-blur-xl border-b border-slate-200/80 px-6 py-4">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
         <a href="/" class="flex items-center gap-3 group">
           <img src="/logo-symbol.png" alt="Vitrine Web" class="h-8 w-auto transition-transform group-hover:scale-105" />
-          <span class="font-['Space_Grotesk'] font-bold text-lg tracking-tight">Vitrine Web</span>
+          <span class="font-['Space_Grotesk'] font-bold text-xl tracking-tight text-[#1E293B]">Vitrine Web</span>
         </a>
-        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300">
-          <a href="/#servicos" class="hover:text-white transition-colors">Serviços</a>
-          <a href="/#projetos" class="hover:text-white transition-colors">Cases de Sucesso</a>
-          <a href="/#sobre-nos" class="hover:text-white transition-colors">Sobre Nós</a>
+        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-600">
+          <a href="/#servicos" class="hover:text-black transition-colors">Serviços</a>
+          <a href="/#projetos" class="hover:text-black transition-colors">Cases de Sucesso</a>
+          <a href="/#sobre-nos" class="hover:text-black transition-colors">Sobre Nós</a>
         </nav>
         <a
           href="https://wa.me/554488680905?text=Ol%C3%A1!%20Tenho%20interesse%20em%20uma%20Landing%20Page%20de%20Alta%20Convers%C3%A3o%20para%20minha%20empresa."
           target="_blank"
           rel="noopener noreferrer"
-          class="px-5 py-2.5 bg-white text-black font-bold text-xs uppercase tracking-wider rounded-full hover:bg-slate-200 transition-all hover:scale-105 shadow-lg"
+          class="px-5 py-2.5 bg-[#1E293B] text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-md"
         >
           Solicitar Orçamento
         </a>
@@ -154,16 +154,16 @@
       
       <!-- Hero Section -->
       <section class="max-w-6xl mx-auto px-6 py-12 md:py-20 text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-8">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-200 bg-white/90 text-blue-900 text-xs font-bold uppercase tracking-widest mb-8 shadow-xs">
+          <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
           Engenharia de Conversão & ROI Máximo
         </div>
 
-        <h1 class="font-['Space_Grotesk'] text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 text-white max-w-5xl mx-auto">
-          Criação de Landing Pages de <span class="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">Alta Conversão</span>
+        <h1 class="font-['Space_Grotesk'] text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.08] mb-6 text-[#1E293B] max-w-5xl mx-auto">
+          Criação de Landing Pages de <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">Alta Conversão</span>
         </h1>
 
-        <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+        <p class="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto font-normal leading-relaxed mb-10">
           Páginas desenvolvidas sob medida para transformar visitantes de tráfego pago em clientes pagantes no seu WhatsApp. Carregamento em menos de 1,5 segundo, copywriting persuasivo e design de alta autoridade.
         </p>
 
@@ -172,36 +172,36 @@
             href="https://wa.me/554488680905?text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento%20para%20cria%C3%A7%C3%A3o%20de%20uma%20Landing%20Page!"
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full sm:w-auto px-8 py-4 bg-white text-black font-bold text-sm uppercase tracking-wider rounded-full hover:bg-slate-200 transition-all hover:scale-105 shadow-xl flex items-center justify-center gap-2"
+            class="w-full sm:w-auto px-8 py-4 bg-[#1E293B] text-white font-bold text-sm uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-xl flex items-center justify-center gap-2"
           >
             <span>Iniciar Projeto no WhatsApp</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a
             href="#cases"
-            class="w-full sm:w-auto px-8 py-4 border border-white/20 text-white font-semibold text-sm uppercase tracking-wider rounded-full hover:bg-white/5 transition-all text-center"
+            class="w-full sm:w-auto px-8 py-4 border border-slate-300 bg-white/60 text-slate-800 font-semibold text-sm uppercase tracking-wider rounded-full hover:bg-white transition-all text-center shadow-xs"
           >
             Ver Cases Reais
           </a>
         </div>
 
-        <!-- Metrics Bar -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-white/10 max-w-4xl mx-auto">
-          <div>
-            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-white">&lt; 1.5s</div>
-            <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Carregamento Mobile</div>
+        <!-- Metrics Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-slate-200/80 max-w-4xl mx-auto">
+          <div class="bg-white/80 p-5 rounded-2xl border border-slate-200/80 shadow-sm">
+            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-[#1E293B]">&lt; 1.5s</div>
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-widest mt-1">Carregamento Mobile</div>
           </div>
-          <div>
-            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-emerald-400">95+</div>
-            <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Google PageSpeed</div>
+          <div class="bg-white/80 p-5 rounded-2xl border border-slate-200/80 shadow-sm">
+            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-blue-600">95+</div>
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-widest mt-1">Google PageSpeed</div>
           </div>
-          <div>
-            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-blue-400">+240%</div>
-            <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Retenção de Leads</div>
+          <div class="bg-white/80 p-5 rounded-2xl border border-slate-200/80 shadow-sm">
+            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-emerald-600">+240%</div>
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-widest mt-1">Retenção de Leads</div>
           </div>
-          <div>
-            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-purple-400">100%</div>
-            <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Design Exclusivo</div>
+          <div class="bg-white/80 p-5 rounded-2xl border border-slate-200/80 shadow-sm">
+            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-purple-600">100%</div>
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-widest mt-1">Design Exclusivo</div>
           </div>
         </div>
       </section>
@@ -209,46 +209,46 @@
       <!-- Competitor Comparison Table -->
       <section class="max-w-6xl mx-auto px-6 py-16">
         <div class="text-center mb-12">
-          <p class="text-xs font-bold tracking-widest uppercase text-blue-400 mb-2">Engenharia vs Amadorismo</p>
-          <h2 class="font-['Space_Grotesk'] text-3xl md:text-4xl font-bold tracking-tight text-white">
+          <p class="text-xs font-bold tracking-widest uppercase text-blue-600 mb-2">Engenharia vs Amadorismo</p>
+          <h2 class="font-['Space_Grotesk'] text-3xl md:text-4xl font-bold tracking-tight text-[#1E293B]">
             Por que a Vitrine Web supera as agências tradicionais?
           </h2>
         </div>
 
-        <div class="overflow-x-auto rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-md">
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-xl">
           <table class="w-full text-left text-sm">
-            <thead class="bg-white/5 text-slate-300 font-['Space_Grotesk'] uppercase text-xs tracking-wider border-b border-white/10">
+            <thead class="bg-slate-100 text-slate-900 font-['Space_Grotesk'] uppercase text-xs tracking-wider border-b border-slate-200">
               <tr>
                 <th class="p-5">Critério de Avaliação</th>
-                <th class="p-5 text-white bg-blue-500/10 border-x border-blue-500/20 font-bold">Vitrine Web (Sob Medida)</th>
-                <th class="p-5 text-slate-400">Agências Tradicionais (WordPress/Wix)</th>
+                <th class="p-5 text-blue-900 bg-blue-50/80 border-x border-blue-200 font-bold">Vitrine Web (Sob Medida)</th>
+                <th class="p-5 text-slate-600">Agências Tradicionais (WordPress / Wix)</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-white/5 text-slate-300">
+            <tbody class="divide-y divide-slate-100 text-slate-700">
               <tr>
-                <td class="p-5 font-semibold text-white">Velocidade de Carregamento</td>
-                <td class="p-5 bg-blue-500/5 border-x border-blue-500/20 text-emerald-400 font-bold">Instantânea (&lt; 1.5s no 4G)</td>
-                <td class="p-5 text-rose-400">Lenta (4s a 9s devido a excesso de plugins)</td>
+                <td class="p-5 font-semibold text-[#1E293B]">Velocidade de Carregamento</td>
+                <td class="p-5 bg-blue-50/40 border-x border-blue-200 text-blue-700 font-bold">Instantânea (&lt; 1.5s no 4G)</td>
+                <td class="p-5 text-rose-600 font-medium">Lenta (4s a 9s devido a excesso de plugins)</td>
               </tr>
               <tr>
-                <td class="p-5 font-semibold text-white">Pontuação no Google PageSpeed</td>
-                <td class="p-5 bg-blue-500/5 border-x border-blue-500/20 text-emerald-400 font-bold">95 a 100 pontos</td>
-                <td class="p-5 text-rose-400">Geralmente abaixo de 50 no mobile</td>
+                <td class="p-5 font-semibold text-[#1E293B]">Pontuação no Google PageSpeed</td>
+                <td class="p-5 bg-blue-50/40 border-x border-blue-200 text-emerald-700 font-bold">95 a 100 pontos</td>
+                <td class="p-5 text-rose-600 font-medium">Geralmente abaixo de 50 no mobile</td>
               </tr>
               <tr>
-                <td class="p-5 font-semibold text-white">Custo por Clique (CPC no Google Ads)</td>
-                <td class="p-5 bg-blue-500/5 border-x border-blue-500/20 text-emerald-400 font-bold">Mais barato (Índice de Qualidade 10/10)</td>
-                <td class="p-5 text-rose-400">Mais caro (rejeição de visitantes por lentidão)</td>
+                <td class="p-5 font-semibold text-[#1E293B]">Custo por Clique (CPC no Google Ads)</td>
+                <td class="p-5 bg-blue-50/40 border-x border-blue-200 text-blue-700 font-bold">Mais barato (Índice de Qualidade 10/10)</td>
+                <td class="p-5 text-rose-600 font-medium">Mais caro (rejeição de visitantes por lentidão)</td>
               </tr>
               <tr>
-                <td class="p-5 font-semibold text-white">Arquitetura Visual</td>
-                <td class="p-5 bg-blue-500/5 border-x border-blue-500/20 text-white font-medium">100% autoral, moderna e fluida</td>
-                <td class="p-5 text-slate-400">Templates genéricos reutilizados</td>
+                <td class="p-5 font-semibold text-[#1E293B]">Arquitetura Visual</td>
+                <td class="p-5 bg-blue-50/40 border-x border-blue-200 text-slate-900 font-semibold">100% autoral, moderna e fluida</td>
+                <td class="p-5 text-slate-600">Templates genéricos reutilizados</td>
               </tr>
               <tr>
-                <td class="p-5 font-semibold text-white">Segurança & Manutenção</td>
-                <td class="p-5 bg-blue-500/5 border-x border-blue-500/20 text-white font-medium">Imune a invasões comuns de CMS</td>
-                <td class="p-5 text-rose-400">Falhas frequentes de plugins desatualizados</td>
+                <td class="p-5 font-semibold text-[#1E293B]">Segurança & Manutenção</td>
+                <td class="p-5 bg-blue-50/40 border-x border-blue-200 text-slate-900 font-semibold">Imune a invasões comuns de CMS</td>
+                <td class="p-5 text-rose-600 font-medium">Falhas frequentes de plugins desatualizados</td>
               </tr>
             </tbody>
           </table>
@@ -258,17 +258,17 @@
       <!-- Showcase Section -->
       <section id="cases" class="max-w-6xl mx-auto px-6 py-16">
         <div class="text-center mb-16">
-          <p class="text-xs font-bold tracking-widest uppercase text-emerald-400 mb-2">Comprovação Prática</p>
-          <h2 class="font-['Space_Grotesk'] text-3xl md:text-5xl font-bold tracking-tight text-white">
+          <p class="text-xs font-bold tracking-widest uppercase text-emerald-600 mb-2">Comprovação Prática</p>
+          <h2 class="font-['Space_Grotesk'] text-3xl md:text-5xl font-bold tracking-tight text-[#1E293B]">
             Landing Pages que geram resultados reais
           </h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
           <!-- Case 1 -->
-          <div class="rounded-2xl border border-white/10 bg-slate-900/50 p-6 flex flex-col justify-between">
+          <div class="rounded-2xl border border-slate-200/90 bg-white p-6 md:p-8 flex flex-col justify-between shadow-xl">
             <div>
-              <div class="rounded-xl overflow-hidden mb-6 aspect-video bg-zinc-800">
+              <div class="rounded-xl overflow-hidden mb-6 aspect-video bg-zinc-800 shadow-md">
                 <img
                   src="/dentista-cassiano.png"
                   alt="Landing Page Dr. Cassiano - Odontologia de Alta Conversão"
@@ -277,9 +277,9 @@
                   class="w-full h-full object-cover"
                 />
               </div>
-              <div class="text-xs uppercase font-bold tracking-wider text-blue-400 mb-2">Saúde & Alta Autoridade</div>
-              <h3 class="font-['Space_Grotesk'] text-2xl font-bold text-white mb-3">Dr. Cassiano Ortodontia</h3>
-              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              <div class="text-xs uppercase font-bold tracking-wider text-blue-600 mb-2">Saúde & Alta Autoridade</div>
+              <h3 class="font-['Space_Grotesk'] text-2xl font-bold text-[#1E293B] mb-3">Dr. Cassiano Ortodontia</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
                 Landing page médica projetada para transmitir 31 anos de experiência clínica. Integração de comparador antes/depois interativo e fluxo direto para o WhatsApp do consultório, atraindo pacientes qualificados de procedimentos de alto valor.
               </p>
             </div>
@@ -287,7 +287,7 @@
               href="https://dr-cassiano-ortodontia.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white hover:text-blue-400 transition-colors"
+              class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1E293B] hover:text-blue-600 transition-colors"
             >
               <span>Ver Projeto Online</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
@@ -295,9 +295,9 @@
           </div>
 
           <!-- Case 2 -->
-          <div class="rounded-2xl border border-white/10 bg-slate-900/50 p-6 flex flex-col justify-between">
+          <div class="rounded-2xl border border-slate-200/90 bg-white p-6 md:p-8 flex flex-col justify-between shadow-xl">
             <div>
-              <div class="rounded-xl overflow-hidden mb-6 aspect-video bg-zinc-800">
+              <div class="rounded-xl overflow-hidden mb-6 aspect-video bg-zinc-800 shadow-md">
                 <img
                   src="/junior-moveis.png"
                   alt="Landing Page Júnior Móveis Sob Medida"
@@ -306,9 +306,9 @@
                   class="w-full h-full object-cover"
                 />
               </div>
-              <div class="text-xs uppercase font-bold tracking-wider text-emerald-400 mb-2">Móveis Planejados & Comércio</div>
-              <h3 class="font-['Space_Grotesk'] text-2xl font-bold text-white mb-3">Júnior Móveis Sob Medida</h3>
-              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              <div class="text-xs uppercase font-bold tracking-wider text-emerald-600 mb-2">Móveis Planejados & Comércio</div>
+              <h3 class="font-['Space_Grotesk'] text-2xl font-bold text-[#1E293B] mb-3">Júnior Móveis Sob Medida</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
                 Desenvolvimento de landing page neo-brutalista moderna com simulador interativo de orçamentos e galeria de obras reais com avaliações 5 estrelas do Google. O lead já chega no WhatsApp pré-qualificado com as medidas do projeto.
               </p>
             </div>
@@ -316,7 +316,7 @@
               href="https://jrmoveissobmedida.com.br"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white hover:text-emerald-400 transition-colors"
+              class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1E293B] hover:text-emerald-600 transition-colors"
             >
               <span>Ver Projeto Online</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
@@ -328,58 +328,59 @@
       <!-- FAQ Section -->
       <section class="max-w-4xl mx-auto px-6 py-16">
         <div class="text-center mb-12">
-          <p class="text-xs font-bold tracking-widest uppercase text-purple-400 mb-2">Tire suas Dúvidas</p>
-          <h2 class="font-['Space_Grotesk'] text-3xl md:text-4xl font-bold tracking-tight text-white">
+          <p class="text-xs font-bold tracking-widest uppercase text-purple-600 mb-2">Tire suas Dúvidas</p>
+          <h2 class="font-['Space_Grotesk'] text-3xl md:text-4xl font-bold tracking-tight text-[#1E293B]">
             Perguntas Frequentes sobre Landing Pages
           </h2>
         </div>
 
         <div class="space-y-4">
-          <details class="group rounded-xl border border-white/10 bg-slate-900/30 p-5 cursor-pointer">
-            <summary class="flex justify-between items-center font-['Space_Grotesk'] font-bold text-lg text-white">
+          <details class="group rounded-2xl border border-slate-200 bg-white p-6 cursor-pointer shadow-xs">
+            <summary class="flex justify-between items-center font-['Space_Grotesk'] font-bold text-lg text-[#1E293B]">
               <span>Qual o prazo de entrega de uma Landing Page?</span>
-              <span class="transition group-open:rotate-180">↓</span>
+              <span class="transition group-open:rotate-180 text-slate-400">↓</span>
             </summary>
-            <p class="mt-4 text-slate-300 text-sm leading-relaxed">
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed font-normal">
               O prazo médio é de 5 a 10 dias úteis. Entregamos o projeto completo: copywriting persuasivo, design de alta fidelidade, desenvolvimento com React e Tailwind, integração de pixels (Meta, Google) e links inteligentes para WhatsApp.
             </p>
           </details>
 
-          <details class="group rounded-xl border border-white/10 bg-slate-900/30 p-5 cursor-pointer">
-            <summary class="flex justify-between items-center font-['Space_Grotesk'] font-bold text-lg text-white">
+          <details class="group rounded-2xl border border-slate-200 bg-white p-6 cursor-pointer shadow-xs">
+            <summary class="flex justify-between items-center font-['Space_Grotesk'] font-bold text-lg text-[#1E293B]">
               <span>A landing page funciona bem no celular?</span>
-              <span class="transition group-open:rotate-180">↓</span>
+              <span class="transition group-open:rotate-180 text-slate-400">↓</span>
             </summary>
-            <p class="mt-4 text-slate-300 text-sm leading-relaxed">
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed font-normal">
               Priorizamos o conceito Mobile-First. Mais de 80% do tráfego de anúncios vem do celular, portanto todas as nossas páginas são calibradas para carregar instantaneamente em qualquer conexão 4G/5G, com botões de chamada no polegar.
             </p>
           </details>
 
-          <details class="group rounded-xl border border-white/10 bg-slate-900/30 p-5 cursor-pointer">
-            <summary class="flex justify-between items-center font-['Space_Grotesk'] font-bold text-lg text-white">
+          <details class="group rounded-2xl border border-slate-200 bg-white p-6 cursor-pointer shadow-xs">
+            <summary class="flex justify-between items-center font-['Space_Grotesk'] font-bold text-lg text-[#1E293B]">
               <span>Como a página é integrada com meu WhatsApp e CRM?</span>
-              <span class="transition group-open:rotate-180">↓</span>
+              <span class="transition group-open:rotate-180 text-slate-400">↓</span>
             </summary>
-            <p class="mt-4 text-slate-300 text-sm leading-relaxed">
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed font-normal">
               Configuramos mensagens dinâmicas personalizadas que identificam a origem do anúncio (ex: "Olá, vim pelo anúncio do Google sobre X serviço"). Também podemos conectar a formulários e CRMs como RD Station, HubSpot ou Notion.
             </p>
           </details>
 
-          <details class="group rounded-xl border border-white/10 bg-slate-900/30 p-5 cursor-pointer">
-            <summary class="flex justify-between items-center font-['Space_Grotesk'] font-bold text-lg text-white">
+          <details class="group rounded-2xl border border-slate-200 bg-white p-6 cursor-pointer shadow-xs">
+            <summary class="flex justify-between items-center font-['Space_Grotesk'] font-bold text-lg text-[#1E293B]">
               <span>Quais as formas de pagamento disponíveis?</span>
-              <span class="transition group-open:rotate-180">↓</span>
+              <span class="transition group-open:rotate-180 text-slate-400">↓</span>
             </summary>
-            <p class="mt-4 text-slate-300 text-sm leading-relaxed">
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed font-normal">
               Trabalhamos com condições flexíveis para empresas: parcelamento no cartão de crédito em até 12x ou entrada + entrega final via PIX / boleto bancário com nota fiscal de serviço.
             </p>
           </details>
         </div>
       </section>
 
-      <!-- Final Conversion CTA -->
+      <!-- Final High-Contrast CTA Section -->
       <section class="max-w-6xl mx-auto px-6 py-20 text-center">
-        <div class="rounded-3xl border border-white/10 bg-gradient-to-b from-blue-950/40 via-slate-900/60 to-slate-950 p-10 md:p-16 relative overflow-hidden">
+        <div class="rounded-3xl bg-[#1E293B] text-white p-10 md:p-16 shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl pointer-events-none"></div>
           <h2 class="font-['Space_Grotesk'] text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
             Pronto para multiplicar os leads do seu negócio?
           </h2>
@@ -390,7 +391,7 @@
             href="https://wa.me/554488680905?text=Ol%C3%A1!%20Quero%20uma%20Landing%20Page%20de%20Alta%20Convers%C3%A3o%20para%20minha%20empresa."
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-slate-200 transition-all hover:scale-105 shadow-2xl"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-slate-100 transition-all hover:scale-105 shadow-2xl"
           >
             <span>Falar com um Especialista no WhatsApp</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -401,17 +402,38 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-white/10 py-12 px-6 text-center text-xs text-slate-500">
+    <footer class="border-t border-slate-200/80 py-12 px-6 text-center text-xs text-slate-500">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p>© 2026 Vitrine Web. Desenvolvimento de Sistemas Web, Landing Pages e ERPs Sob Medida.</p>
-        <div class="flex items-center gap-6">
-          <a href="/" class="hover:text-white transition-colors">Início</a>
-          <a href="/desenvolvimento-de-sistemas-web/" class="hover:text-white transition-colors">Sistemas Web</a>
-          <a href="/sistema-erp-sob-medida/" class="hover:text-white transition-colors">ERPs Sob Medida</a>
-          <a href="https://wa.me/554488680905" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">WhatsApp</a>
+        <div class="flex items-center gap-6 font-medium text-slate-600">
+          <a href="/" class="hover:text-black transition-colors">Início</a>
+          <a href="/desenvolvimento-de-sistemas-web" class="hover:text-black transition-colors">Sistemas Web</a>
+          <a href="/sistema-erp-sob-medida" class="hover:text-black transition-colors">ERPs Sob Medida</a>
+          <a href="https://wa.me/554488680905" target="_blank" rel="noopener noreferrer" class="hover:text-black transition-colors">WhatsApp</a>
         </div>
       </div>
     </footer>
 
+    <!-- Interactive Cursor Script -->
+    <script>
+      (function() {
+        const cursor = document.getElementById('custom-cursor');
+        if (!cursor || !window.matchMedia('(pointer: fine)').matches) return;
+        
+        window.addEventListener('mousemove', (e) => {
+          cursor.style.transform = `translate3d(${e.clientX - 10}px, ${e.clientY - 10}px, 0)`;
+        });
+
+        document.querySelectorAll('a, button, details, summary').forEach(el => {
+          el.addEventListener('mouseenter', () => {
+            cursor.style.transform += ' scale(2)';
+            cursor.style.transition = 'transform 0.15s ease-out';
+          });
+          el.addEventListener('mouseleave', () => {
+            cursor.style.transition = 'none';
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

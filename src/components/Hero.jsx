@@ -33,20 +33,20 @@ export const Hero = () => {
     >
       <div className="max-w-[100rem] w-full relative z-10 my-auto flex flex-col justify-center">
         <div className="mb-6 sm:mb-8 md:mb-10">
-          <span className="inline-flex items-center text-left text-[11px] sm:text-xs md:text-sm uppercase tracking-wider sm:tracking-widest font-semibold px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md opacity-85 leading-normal max-w-full">
+          <span className="inline-flex items-center text-left text-[11px] sm:text-xs md:text-sm uppercase tracking-wider sm:tracking-widest font-semibold px-4 py-2 rounded-full border border-slate-300/80 bg-white/70 text-slate-800 backdrop-blur-md shadow-xs leading-normal max-w-full">
             Empresa de Sistemas Web • Landing Pages • ERPs Sob Medida
           </span>
         </div>
 
         <h1 
           ref={titleRef} 
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] 2xl:text-[6.8rem] font-extrabold tracking-tighter leading-[1.05] sm:leading-[1.02] md:leading-none"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] 2xl:text-[6.8rem] font-extrabold tracking-tighter leading-[1.05] sm:leading-[1.02] md:leading-none text-[#1E293B]"
         >
           Transformamos<br className="hidden sm:inline" /> ideias em experiências<br className="hidden sm:inline" /> digitais.
         </h1>
         <p 
           ref={subtitleRef} 
-          className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl font-light opacity-80 leading-relaxed"
+          className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl font-light text-slate-600 leading-relaxed"
         >
           Desenvolvemos sistemas web sob medida, landing pages de alta conversão e ERPs corporativos para acelerar a presença online e os resultados do seu negócio.
         </p>
@@ -56,7 +56,7 @@ export const Hero = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="Iniciar projeto via WhatsApp com a Vitrine Web"
-            className="px-8 py-3.5 sm:py-4 bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform text-center shadow-lg text-sm sm:text-base"
+            className="px-8 py-3.5 sm:py-4 bg-[#1E293B] text-white font-semibold rounded-full hover:bg-black hover:scale-105 transition-all text-center shadow-xl text-sm sm:text-base"
           >
             Iniciar projeto
           </a>
@@ -72,14 +72,14 @@ export const Hero = () => {
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="px-8 py-3.5 sm:py-4 border border-white/30 hover:border-white/80 font-semibold rounded-full hover:scale-105 transition-all text-center cursor-pointer text-sm sm:text-base"
+            className="px-8 py-3.5 sm:py-4 border border-slate-400/80 text-slate-900 hover:border-slate-900 font-semibold rounded-full hover:scale-105 transition-all text-center cursor-pointer text-sm sm:text-base bg-white/40 backdrop-blur-xs"
           >
             Ver trabalhos
           </a>
         </div>
       </div>
       
-      <div className="hidden lg:flex absolute bottom-6 xl:bottom-8 left-1/2 -translate-x-1/2 flex-col items-center opacity-50 pointer-events-none hero-scroll-indicator">
+      <div className="hidden lg:flex absolute bottom-6 xl:bottom-8 left-1/2 -translate-x-1/2 flex-col items-center opacity-50 pointer-events-none hero-scroll-indicator text-slate-600">
         <span className="text-xs tracking-widest uppercase mb-2">Scroll</span>
         <div className="scroll-line w-[1px] h-10 bg-current origin-top"></div>
       </div>

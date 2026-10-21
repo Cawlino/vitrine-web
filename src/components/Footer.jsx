@@ -6,13 +6,13 @@ export const Footer = ({ onNavigate }) => {
       <div className="max-w-[100rem] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
         
         <div className="flex-1 w-full">
-          <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-4 opacity-50">Tem um projeto em mente?</p>
+          <p className="text-xs sm:text-sm font-bold tracking-widest uppercase mb-4 opacity-50 text-slate-600">Tem um projeto em mente?</p>
           <img 
             src="/logo-symbol.png" 
             alt="Vitrine Web" 
             className="h-10 md:h-16 w-auto object-contain mb-6"
           />
-          <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none mb-8 sm:mb-10">
+          <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none mb-8 sm:mb-10 text-[#1E293B]">
             VAMOS<br/>CONVERSAR.
           </h2>
           <a 
@@ -26,13 +26,13 @@ export const Footer = ({ onNavigate }) => {
           </a>
         </div>
         
-        <div className="flex flex-col items-start md:items-end gap-10 text-xs sm:text-sm tracking-widest uppercase font-medium w-full md:w-auto">
+        <div className="flex flex-col items-start md:items-end gap-10 text-xs sm:text-sm tracking-widest uppercase font-medium w-full md:w-auto text-[#1E293B]">
           
           <div className="grid grid-cols-2 gap-x-8 sm:gap-x-12 gap-y-6 text-left md:text-right w-full sm:w-auto">
             
             {/* Top-Left: LinkedIn */}
             <div className="relative group flex justify-end">
-              <div className="hover:opacity-50 transition-opacity flex items-center gap-2" data-cursor="hover">
+              <div className="hover:opacity-50 transition-opacity flex items-center gap-2 cursor-pointer" data-cursor="hover">
                 LinkedIn
               </div>
               <div className="absolute right-0 bottom-full hidden group-hover:block pb-2 z-50">
@@ -49,7 +49,7 @@ export const Footer = ({ onNavigate }) => {
             
             {/* Top-Right: Instagram */}
             <div className="relative group flex justify-end">
-              <div className="hover:opacity-50 transition-opacity flex items-center gap-2" data-cursor="hover">
+              <div className="hover:opacity-50 transition-opacity flex items-center gap-2 cursor-pointer" data-cursor="hover">
                 Instagram
               </div>
               <div className="absolute right-0 bottom-full hidden group-hover:block pb-2 z-50">
@@ -66,21 +66,21 @@ export const Footer = ({ onNavigate }) => {
 
             {/* Services & Projetos */}
             <div className="flex justify-end">
-              <button className="hover:opacity-50 transition-opacity uppercase" data-cursor="hover" onClick={() => onNavigate && onNavigate('home', '#servicos')}>Serviços</button>
+              <button className="hover:opacity-50 transition-opacity uppercase cursor-pointer" data-cursor="hover" onClick={() => onNavigate && onNavigate('home', '#servicos')}>Serviços</button>
             </div>
 
             <div className="flex justify-end">
-              <button className="hover:opacity-50 transition-opacity uppercase" data-cursor="hover" onClick={() => onNavigate && onNavigate('home', '#projetos')}>Projetos</button>
+              <button className="hover:opacity-50 transition-opacity uppercase cursor-pointer" data-cursor="hover" onClick={() => onNavigate && onNavigate('home', '#projetos')}>Projetos</button>
             </div>
             
             {/* Sobre Nós */}
             <div className="flex justify-end">
-              <button className="hover:opacity-50 transition-opacity uppercase" data-cursor="hover" onClick={() => onNavigate && onNavigate('home', '#sobre-nos')}>Sobre Nós</button>
+              <button className="hover:opacity-50 transition-opacity uppercase cursor-pointer" data-cursor="hover" onClick={() => onNavigate && onNavigate('home', '#sobre-nos')}>Sobre Nós</button>
             </div>
 
             {/* Contato */}
             <div className="flex justify-end">
-              <button className="hover:opacity-50 transition-opacity uppercase" data-cursor="hover" onClick={() => onNavigate && onNavigate('home', '#contato')}>Contato</button>
+              <button className="hover:opacity-50 transition-opacity uppercase cursor-pointer" data-cursor="hover" onClick={() => onNavigate && onNavigate('home', '#contato')}>Contato</button>
             </div>
             
           </div>
@@ -105,14 +105,14 @@ export const Footer = ({ onNavigate }) => {
       </div>
 
       {/* SEO Footer Bar */}
-      <div className="max-w-[100rem] mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-60 tracking-wider">
+      <div className="max-w-[100rem] mx-auto mt-20 pt-8 border-t border-slate-300/60 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600 tracking-wider">
         <p>© {new Date().getFullYear()} Vitrine Web. Desenvolvimento de Sistemas Web, Landing Pages de Alta Conversão e ERPs Sob Medida.</p>
-        <div className="flex flex-wrap items-center justify-center gap-4 text-[11px]">
-          <a href="/criacao-de-landing-page/" className="hover:text-white transition-colors underline decoration-white/20 underline-offset-4">Criação de Landing Pages</a>
+        <div className="flex flex-wrap items-center justify-center gap-4 text-[11px] font-medium text-slate-700">
+          <a href="/criacao-de-landing-page" className="hover:text-black transition-colors underline decoration-slate-400 underline-offset-4">Criação de Landing Pages</a>
           <span className="opacity-30">•</span>
-          <a href="/desenvolvimento-de-sistemas-web/" className="hover:text-white transition-colors underline decoration-white/20 underline-offset-4">Sistemas Web Sob Medida</a>
+          <a href="/desenvolvimento-de-sistemas-web" className="hover:text-black transition-colors underline decoration-slate-400 underline-offset-4">Sistemas Web Sob Medida</a>
           <span className="opacity-30">•</span>
-          <a href="/sistema-erp-sob-medida/" className="hover:text-white transition-colors underline decoration-white/20 underline-offset-4">Sistemas ERP Corporativos</a>
+          <a href="/sistema-erp-sob-medida" className="hover:text-black transition-colors underline decoration-slate-400 underline-offset-4">Sistemas ERP Corporativos</a>
         </div>
       </div>
     </footer>

@@ -7,6 +7,9 @@
     <link rel="apple-touch-icon" href="/favicon.png" />
     <link rel="manifest" href="/manifest.json" />
 
+    <!-- Verificação do Google Search Console -->
+    <meta name="google-site-verification" content="SVr1oZ6awQ9538sn_Rq-yeU2cJm1QrrG0bZyy2k_OOw" />
+
     <!-- SEO Primário -->
     <title>Sistema ERP Sob Medida: Gestão Corporativa | Vitrine Web</title>
     <meta
@@ -41,16 +44,16 @@
     />
     <meta name="twitter:image" content="https://agenciavitrineweb.com.br/gestao-funcionarios.png" />
 
-    <meta name="theme-color" content="#0F172A" />
+    <meta name="theme-color" content="#F0F4F8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/index.css" />
 
-    <!-- Schema.org JSON-LD (Service + FAQPage) -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -104,25 +107,35 @@
     </script>
   </head>
 
-  <body class="bg-[#0B0F19] text-[#F1F5F9] font-['Inter',sans-serif] antialiased selection:bg-white selection:text-black min-h-screen">
+  <body class="bg-[#F0F4F8] text-[#1E293B] font-['Inter',sans-serif] antialiased min-h-screen selection:bg-[#1E293B] selection:text-white relative">
     
-    <!-- Top Bar Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#0B0F19]/80 backdrop-blur-xl border-b border-white/10 px-6 py-4">
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="custom-cursor hidden md:block"></div>
+
+    <!-- Soft Background Gradients -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+      <div class="grain-overlay absolute inset-0 z-10 opacity-[0.03]"></div>
+      <div class="absolute top-[-5%] left-[-5%] w-[45vw] h-[45vw] bg-purple-200/50 rounded-full filter blur-[120px]"></div>
+      <div class="absolute bottom-[-10%] right-[-5%] w-[50vw] h-[50vw] bg-pink-200/40 rounded-full filter blur-[140px]"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#F0F4F8]/85 backdrop-blur-xl border-b border-slate-200/80 px-6 py-4">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
         <a href="/" class="flex items-center gap-3 group">
           <img src="/logo-symbol.png" alt="Vitrine Web" class="h-8 w-auto transition-transform group-hover:scale-105" />
-          <span class="font-['Space_Grotesk'] font-bold text-lg tracking-tight">Vitrine Web</span>
+          <span class="font-['Space_Grotesk'] font-bold text-xl tracking-tight text-[#1E293B]">Vitrine Web</span>
         </a>
-        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300">
-          <a href="/#servicos" class="hover:text-white transition-colors">Serviços</a>
-          <a href="/#projetos" class="hover:text-white transition-colors">Cases de Sucesso</a>
-          <a href="/#sobre-nos" class="hover:text-white transition-colors">Sobre Nós</a>
+        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-600">
+          <a href="/#servicos" class="hover:text-black transition-colors">Serviços</a>
+          <a href="/#projetos" class="hover:text-black transition-colors">Cases de Sucesso</a>
+          <a href="/#sobre-nos" class="hover:text-black transition-colors">Sobre Nós</a>
         </nav>
         <a
           href="https://wa.me/554488680905?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20Sistema%20ERP%20Sob%20Medida%20para%20minha%20empresa."
           target="_blank"
           rel="noopener noreferrer"
-          class="px-5 py-2.5 bg-white text-black font-bold text-xs uppercase tracking-wider rounded-full hover:bg-slate-200 transition-all hover:scale-105 shadow-lg"
+          class="px-5 py-2.5 bg-[#1E293B] text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-md"
         >
           Diagnóstico Gratuito
         </a>
@@ -133,16 +146,16 @@
       
       <!-- Hero Section -->
       <section class="max-w-6xl mx-auto px-6 py-12 md:py-20 text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-xs font-semibold uppercase tracking-widest mb-8">
-          <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-200 bg-white/90 text-purple-900 text-xs font-bold uppercase tracking-widest mb-8 shadow-xs">
+          <span class="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
           Fim das Planilhas Paralelas & Erros Manuais
         </div>
 
-        <h1 class="font-['Space_Grotesk'] text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 text-white max-w-5xl mx-auto">
-          Sistema ERP Sob Medida: <span class="bg-gradient-to-r from-purple-400 via-pink-300 to-indigo-400 bg-clip-text text-transparent">Gestão Corporativa Inteligente</span>
+        <h1 class="font-['Space_Grotesk'] text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.08] mb-6 text-[#1E293B] max-w-5xl mx-auto">
+          Sistema ERP Sob Medida: <span class="bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent">Gestão Corporativa Inteligente</span>
         </h1>
 
-        <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+        <p class="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto font-normal leading-relaxed mb-10">
           Centralize colaboradores, departamentos, controle de rotinas operacionais e relatórios analíticos em uma plataforma web exclusiva para o seu modelo de negócio.
         </p>
 
@@ -151,76 +164,76 @@
             href="https://wa.me/554488680905?text=Ol%C3%A1,%20gostaria%20de%20um%20diagn%C3%B3stico%20para%20substituir%20nossas%20planilhas%20por%20um%20ERP%20sob%20medida."
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full sm:w-auto px-8 py-4 bg-white text-black font-bold text-sm uppercase tracking-wider rounded-full hover:bg-slate-200 transition-all hover:scale-105 shadow-xl flex items-center justify-center gap-2"
+            class="w-full sm:w-auto px-8 py-4 bg-[#1E293B] text-white font-bold text-sm uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-xl flex items-center justify-center gap-2"
           >
             <span>Solicitar Diagnóstico Operacional</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a
             href="#recursos"
-            class="w-full sm:w-auto px-8 py-4 border border-white/20 text-white font-semibold text-sm uppercase tracking-wider rounded-full hover:bg-white/5 transition-all text-center"
+            class="w-full sm:w-auto px-8 py-4 border border-slate-300 bg-white/60 text-slate-800 font-semibold text-sm uppercase tracking-wider rounded-full hover:bg-white transition-all text-center shadow-xs"
           >
             Conhecer Módulos
           </a>
         </div>
 
         <!-- Metric highlights -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-white/10 max-w-4xl mx-auto">
-          <div>
-            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-white">-70%</div>
-            <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Tempo em Rotinas Manuais</div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-slate-200/80 max-w-4xl mx-auto">
+          <div class="bg-white/80 p-5 rounded-2xl border border-slate-200/80 shadow-sm">
+            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-[#1E293B]">-70%</div>
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-widest mt-1">Tempo em Rotinas Manuais</div>
           </div>
-          <div>
-            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-emerald-400">100%</div>
-            <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Dados em Nuvem Segura</div>
+          <div class="bg-white/80 p-5 rounded-2xl border border-slate-200/80 shadow-sm">
+            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-emerald-600">100%</div>
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-widest mt-1">Dados em Nuvem Segura</div>
           </div>
-          <div>
-            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-purple-400">R$ 0</div>
-            <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Custo por Usuário Extra</div>
+          <div class="bg-white/80 p-5 rounded-2xl border border-slate-200/80 shadow-sm">
+            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-purple-600">R$ 0</div>
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-widest mt-1">Custo por Usuário Extra</div>
           </div>
-          <div>
-            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-blue-400">24/7</div>
-            <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Acesso Web & Mobile</div>
+          <div class="bg-white/80 p-5 rounded-2xl border border-slate-200/80 shadow-sm">
+            <div class="font-['Space_Grotesk'] text-3xl md:text-4xl font-extrabold text-blue-600">24/7</div>
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-widest mt-1">Acesso Web & Mobile</div>
           </div>
         </div>
       </section>
 
       <!-- Case in Highlight: Gestão Corporativa / RH -->
       <section class="max-w-6xl mx-auto px-6 py-16">
-        <div class="rounded-3xl border border-white/10 bg-gradient-to-r from-slate-900 via-purple-950/40 to-slate-900 p-8 md:p-14">
+        <div class="rounded-3xl border border-slate-200/90 bg-white p-8 md:p-14 shadow-xl">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <div class="inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider mb-4">
+              <div class="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-bold uppercase tracking-wider mb-4">
                 Caso Real Desenvolvido
               </div>
-              <h2 class="font-['Space_Grotesk'] text-3xl md:text-5xl font-extrabold text-white mb-6">
+              <h2 class="font-['Space_Grotesk'] text-3xl md:text-5xl font-extrabold text-[#1E293B] mb-6">
                 Gestão Corporativa: Controle Total de Colaboradores e Setores
               </h2>
-              <p class="text-slate-300 text-base leading-relaxed mb-6 font-light">
+              <p class="text-slate-600 text-base leading-relaxed mb-6 font-normal">
                 Plataforma corporativa construída para substituir controles manuais em planilhas. Permite o cadastro e organização de funcionários, alocação em departamentos com dependências em lote, controle de permissões de acesso e geração instantânea de relatórios operacionais.
               </p>
-              <ul class="space-y-3 mb-8 text-sm text-slate-200">
+              <ul class="space-y-3 mb-8 text-sm text-slate-700 font-medium">
                 <li class="flex items-center gap-2">
-                  <span class="text-purple-400 font-bold">✓</span> Autenticação segura e permissões por perfil (RH, Gestores, Diretoria)
+                  <span class="text-purple-600 font-bold">✓</span> Autenticação segura e permissões por perfil (RH, Gestores, Diretoria)
                 </li>
                 <li class="flex items-center gap-2">
-                  <span class="text-purple-400 font-bold">✓</span> Sincronização em tempo real via Cloud Firestore
+                  <span class="text-purple-600 font-bold">✓</span> Sincronização em tempo real via Cloud Firestore
                 </li>
                 <li class="flex items-center gap-2">
-                  <span class="text-purple-400 font-bold">✓</span> Interface limpa e intuitiva projetada com Material UI
+                  <span class="text-purple-600 font-bold">✓</span> Interface limpa e intuitiva projetada com Material UI
                 </li>
               </ul>
               <a
                 href="https://wa.me/554488680905?text=Ol%C3%A1!%20Vi%20o%20case%20de%20Gest%C3%A3o%20Corporativa%20e%20gostaria%20de%20algo%20semelhante%20para%20minha%20empresa."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-bold text-xs uppercase tracking-wider rounded-full hover:bg-slate-200 transition-all"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-[#1E293B] text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black transition-all shadow-md"
               >
                 <span>Solicitar Demonstração</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
               </a>
             </div>
-            <div class="rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-zinc-900">
+            <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-zinc-900">
               <img
                 src="/gestao-funcionarios.png"
                 alt="Sistema de Gestão Corporativa e Colaboradores Vitrine Web"
@@ -236,28 +249,28 @@
       <!-- Modules Section -->
       <section id="recursos" class="max-w-6xl mx-auto px-6 py-16">
         <div class="text-center mb-12">
-          <p class="text-xs font-bold tracking-widest uppercase text-purple-400 mb-2">Módulos Customizados</p>
-          <h2 class="font-['Space_Grotesk'] text-3xl md:text-4xl font-bold tracking-tight text-white">
+          <p class="text-xs font-bold tracking-widest uppercase text-purple-600 mb-2">Módulos Customizados</p>
+          <h2 class="font-['Space_Grotesk'] text-3xl md:text-4xl font-bold tracking-tight text-[#1E293B]">
             O que podemos construir no seu ERP?
           </h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-6 rounded-2xl border border-white/10 bg-slate-900/40">
-            <h3 class="font-['Space_Grotesk'] text-xl font-bold text-white mb-3">RH & Departamento Pessoal</h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
+          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-md">
+            <h3 class="font-['Space_Grotesk'] text-xl font-bold text-[#1E293B] mb-3">RH & Departamento Pessoal</h3>
+            <p class="text-sm text-slate-600 leading-relaxed font-normal">
               Controle de colaboradores, cargos, salários, férias, atestados e registro de ocorrências operacionais sem risco de extravio de informações.
             </p>
           </div>
-          <div class="p-6 rounded-2xl border border-white/10 bg-slate-900/40">
-            <h3 class="font-['Space_Grotesk'] text-xl font-bold text-white mb-3">Estoque & Compras</h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
+          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-md">
+            <h3 class="font-['Space_Grotesk'] text-xl font-bold text-[#1E293B] mb-3">Estoque & Compras</h3>
+            <p class="text-sm text-slate-600 leading-relaxed font-normal">
               Gestão de suprimentos, ponto de reposição automatizado, rastreamento de lotes e histórico de fornecedores para evitar desabastecimento.
             </p>
           </div>
-          <div class="p-6 rounded-2xl border border-white/10 bg-slate-900/40">
-            <h3 class="font-['Space_Grotesk'] text-xl font-bold text-white mb-3">Financeiro & Faturamento</h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
+          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-md">
+            <h3 class="font-['Space_Grotesk'] text-xl font-bold text-[#1E293B] mb-3">Financeiro & Faturamento</h3>
+            <p class="text-sm text-slate-600 leading-relaxed font-normal">
               Contas a pagar e receber, conciliação bancária, fluxo de caixa projetado e emissão de cobranças automáticas via PIX e boletos.
             </p>
           </div>
@@ -267,38 +280,39 @@
       <!-- FAQ Section -->
       <section class="max-w-4xl mx-auto px-6 py-16">
         <div class="text-center mb-12">
-          <p class="text-xs font-bold tracking-widest uppercase text-purple-400 mb-2">Perguntas Frequentes</p>
-          <h2 class="font-['Space_Grotesk'] text-3xl md:text-4xl font-bold tracking-tight text-white">
+          <p class="text-xs font-bold tracking-widest uppercase text-purple-600 mb-2">Perguntas Frequentes</p>
+          <h2 class="font-['Space_Grotesk'] text-3xl md:text-4xl font-bold tracking-tight text-[#1E293B]">
             Tire suas dúvidas sobre ERP Sob Medida
           </h2>
         </div>
 
         <div class="space-y-4">
-          <details class="group rounded-xl border border-white/10 bg-slate-900/30 p-5 cursor-pointer">
-            <summary class="flex justify-between items-center font-['Space_Grotesk'] font-bold text-lg text-white">
+          <details class="group rounded-2xl border border-slate-200 bg-white p-6 cursor-pointer shadow-xs">
+            <summary class="flex justify-between items-center font-['Space_Grotesk'] font-bold text-lg text-[#1E293B]">
               <span>Nossa equipe terá dificuldade de adaptação com o novo sistema?</span>
-              <span class="transition group-open:rotate-180">↓</span>
+              <span class="transition group-open:rotate-180 text-slate-400">↓</span>
             </summary>
-            <p class="mt-4 text-slate-300 text-sm leading-relaxed">
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed font-normal">
               Não. Pelo contrário: sistemas genéricos são difíceis porque contêm centenas de botões e campos que sua empresa nunca usa. O ERP sob medida possui apenas o que sua equipe precisa no dia a dia, com interface desenhada para simplicidade e velocidade.
             </p>
           </details>
 
-          <details class="group rounded-xl border border-white/10 bg-slate-900/30 p-5 cursor-pointer">
-            <summary class="flex justify-between items-center font-['Space_Grotesk'] font-bold text-lg text-white">
+          <details class="group rounded-2xl border border-slate-200 bg-white p-6 cursor-pointer shadow-xs">
+            <summary class="flex justify-between items-center font-['Space_Grotesk'] font-bold text-lg text-[#1E293B]">
               <span>Como funciona a segurança e backups dos dados?</span>
-              <span class="transition group-open:rotate-180">↓</span>
+              <span class="transition group-open:rotate-180 text-slate-400">↓</span>
             </summary>
-            <p class="mt-4 text-slate-300 text-sm leading-relaxed">
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed font-normal">
               Os dados ficam armazenados em datacenters globais de nível bancário com backups automáticos diários, criptografia em trânsito e em repouso. Somente os usuários autorizados pela sua empresa têm acesso.
             </p>
           </details>
         </div>
       </section>
 
-      <!-- Final Conversion CTA -->
+      <!-- Conversion CTA Section -->
       <section class="max-w-6xl mx-auto px-6 py-20 text-center">
-        <div class="rounded-3xl border border-white/10 bg-gradient-to-b from-purple-950/40 via-slate-900/60 to-slate-950 p-10 md:p-16">
+        <div class="rounded-3xl bg-[#1E293B] text-white p-10 md:p-16 shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl pointer-events-none"></div>
           <h2 class="font-['Space_Grotesk'] text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
             Elimine as planilhas manuais da sua empresa hoje
           </h2>
@@ -309,7 +323,7 @@
             href="https://wa.me/554488680905?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20um%20Sistema%20ERP%20sob%20medida."
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-slate-200 transition-all hover:scale-105 shadow-2xl"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-bold text-sm uppercase tracking-widest rounded-full hover:bg-slate-100 transition-all hover:scale-105 shadow-2xl"
           >
             <span>Conversar no WhatsApp</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -320,17 +334,38 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-white/10 py-12 px-6 text-center text-xs text-slate-500">
+    <footer class="border-t border-slate-200/80 py-12 px-6 text-center text-xs text-slate-500">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p>© 2026 Vitrine Web. Desenvolvimento de Sistemas Web, Landing Pages e ERPs Sob Medida.</p>
-        <div class="flex items-center gap-6">
-          <a href="/" class="hover:text-white transition-colors">Início</a>
-          <a href="/criacao-de-landing-page/" class="hover:text-white transition-colors">Landing Pages</a>
-          <a href="/desenvolvimento-de-sistemas-web/" class="hover:text-white transition-colors">Sistemas Web</a>
-          <a href="https://wa.me/554488680905" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">WhatsApp</a>
+        <div class="flex items-center gap-6 font-medium text-slate-600">
+          <a href="/" class="hover:text-black transition-colors">Início</a>
+          <a href="/criacao-de-landing-page" class="hover:text-black transition-colors">Landing Pages</a>
+          <a href="/desenvolvimento-de-sistemas-web" class="hover:text-black transition-colors">Sistemas Web</a>
+          <a href="https://wa.me/554488680905" target="_blank" rel="noopener noreferrer" class="hover:text-black transition-colors">WhatsApp</a>
         </div>
       </div>
     </footer>
 
+    <!-- Interactive Cursor Script -->
+    <script>
+      (function() {
+        const cursor = document.getElementById('custom-cursor');
+        if (!cursor || !window.matchMedia('(pointer: fine)').matches) return;
+        
+        window.addEventListener('mousemove', (e) => {
+          cursor.style.transform = `translate3d(${e.clientX - 10}px, ${e.clientY - 10}px, 0)`;
+        });
+
+        document.querySelectorAll('a, button, details, summary').forEach(el => {
+          el.addEventListener('mouseenter', () => {
+            cursor.style.transform += ' scale(2)';
+            cursor.style.transition = 'transform 0.15s ease-out';
+          });
+          el.addEventListener('mouseleave', () => {
+            cursor.style.transition = 'none';
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

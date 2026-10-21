@@ -14,9 +14,10 @@ body {
   color: var(--color-light-text);
 }
 
-/* Hide default cursor globally on fine pointer devices so only custom cursor is visible */
+/* Only hide default cursor when custom cursor element is active and present in the DOM */
 @media (pointer: fine) {
-  *, *::before, *::after {
+  body:has(.custom-cursor),
+  body:has(.custom-cursor) * {
     cursor: none !important;
   }
 }
@@ -46,7 +47,7 @@ body {
   50% { transform: translateY(-5px); }
 }
 
-/* Custom scroll indicator animation — replaces generic animate-bounce */
+/* Custom scroll indicator animation */
 @keyframes scroll-draw {
   0% { transform: scaleY(0); opacity: 0; }
   50% { transform: scaleY(1); opacity: 1; }
@@ -57,7 +58,7 @@ body {
   animation: scroll-draw 2.5s ease-in-out infinite;
 }
 
-/* Grain texture overlay — static SVG background, no runtime filter cost */
+/* Grain texture overlay */
 .grain-overlay {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-size: 256px 256px;
@@ -71,4 +72,3 @@ body {
     width: calc(100vw * var(--total-services, 4));
   }
 }
-
