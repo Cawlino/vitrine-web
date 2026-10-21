@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false,
   "headers": [
     {
@@ -21,6 +21,8 @@
     }
   ],
   "rewrites": [
+    { "source": "/google1ff0d6f22124c931", "destination": "/google1ff0d6f22124c931.html" },
+    { "source": "/google1ff0d6f22124c931.html", "destination": "/google1ff0d6f22124c931.html" },
     { "source": "/criacao-de-landing-page", "destination": "/criacao-de-landing-page/index.html" },
     { "source": "/criacao-de-landing-page/(.*)", "destination": "/criacao-de-landing-page/index.html" },
     { "source": "/desenvolvimento-de-sistemas-web", "destination": "/desenvolvimento-de-sistemas-web/index.html" },
