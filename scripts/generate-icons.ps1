@@ -57,6 +57,8 @@ Generate-Square-Icon -size 512 -outputPath (Join-Path $baseDir "favicon.png") -s
 Generate-Square-Icon -size 192 -outputPath (Join-Path $baseDir "icon-192.png") -scaleFactor 0.84
 Generate-Square-Icon -size 180 -outputPath (Join-Path $baseDir "apple-touch-icon.png") -scaleFactor 0.84
 Generate-Square-Icon -size 48  -outputPath (Join-Path $baseDir "favicon-48x48.png") -scaleFactor 0.84
+Generate-Square-Icon -size 32  -outputPath (Join-Path $baseDir "favicon-32x32.png") -scaleFactor 0.84
+Generate-Square-Icon -size 16  -outputPath (Join-Path $baseDir "favicon-16x16.png") -scaleFactor 0.84
 
 $fileStream.Close()
 $symImg.Dispose()
