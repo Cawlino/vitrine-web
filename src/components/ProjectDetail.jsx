@@ -13,6 +13,17 @@ const projectDetails = {
     aspect: 'aspect-video w-full',
     demoUrl: 'https://pacexai.com'
   },
+  'thaissa-simitan': {
+    title: 'THAÍSSA',
+    subtitle: 'SIMITAN',
+    image: '/thaissa-simitan.png',
+    description: 'Presença digital de alta autoridade e acolhimento para psicologia clínica em Londrina. Desenvolvida para Thaíssa de Carvalho Simitan (CRP 08/17361), especialista em Terapia Cognitivo-Comportamental (TCC), Sexologia Clínica e Terapia de Casal na Clínica Cognitiva Londrina. O projeto une estética editorial em dark mode, prova social com 5,0 estrelas no Google, engenharia de SEO local com Schema.org (@type: Psychologist), nota máxima 100/100 em SEO e Boas Práticas no Lighthouse e infraestrutura em produção na Vercel Edge São Paulo com HSTS preload.',
+    client: 'Thaíssa de Carvalho Simitan — Psicóloga Clínica (CRP 08/17361)',
+    services: 'Web Design Editorial, Landing Page de Alta Conversão, SEO Técnico & Local',
+    technologies: 'HTML5 Semântico, Tailwind CSS, AOS Animations, Schema.org JSON-LD, Vercel Edge',
+    aspect: 'aspect-[5/3] w-full',
+    demoUrl: 'https://thaissasimitan.com.br'
+  },
   'junior-moveis': {
     title: 'JÚNIOR',
     subtitle: 'MÓVEIS',
@@ -94,6 +105,8 @@ export const ProjectDetail = ({ projectId, onNavigate }) => {
         <img 
           src={project.image} 
           alt={`${project.title} ${project.subtitle} - ${project.services} desenvolvido pela Vitrine Web`} 
+          fetchPriority="high"
+          decoding="async"
           className="w-full h-full object-cover transition-all duration-700"
         />
       </div>

@@ -1,20 +1,18 @@
 # Status do Projeto (STATUS.md)
 
-- **Última Atualização:** 2026-10-30T11:51:00-03:00
-- **Status Geral:** Em análise e otimização de SEO pós-lançamento
+- **Última Atualização:** 2026-11-11T20:23:00-03:00
+- **Status Geral:** Portfólio atualizado com Thaíssa Simitan (2º lugar) e redirect 308 de `.vercel.app` para `.com.br`
 
 ## 📍 Ponto Exato de Parada / Onde Estamos
-Auditoria aprofundada dos primeiros 9 dias de indexação no Google Search Console e diagnóstico do ícone de pesquisa (globo).
+Projeto Thaíssa Simitan (`https://thaissasimitan.com.br`) adicionado em 2º lugar e redirecionamento permanente (`308`) de `agenciavitrineweb.vercel.app` para `https://agenciavitrineweb.com.br` configurado em `vercel.json`, pronto para commit e deploy em produção.
 
 ## ✅ Tarefas Concluídas Recentemente
-1. Extração de métricas detalhadas da API do Google Search Console (Analytics por Data, Página e Dispositivo).
-2. Descoberta da causa-raiz do "globinho": Googlebot rastreou a home pela última vez em 2026-10-21T02:07:50Z (antes da correção dos favicons 1:1 quadrados) e ainda não executou novo rastreamento na home.
-3. Criação e implementação de `favicon.ico` multi-resolução (16x16, 32x32, 48x48) em `public/favicon.ico`.
-4. Atualização das tags `<link rel="icon" href="/favicon.ico" sizes="any">` nas 4 rotas públicas.
+1. Adicionada imagem oficial desktop + mobile (`public/thaissa-simitan.png`, 1400×840) e inserido o case `thaissa-simitan` em 2º lugar (`Showcase.jsx`, `ProjectDetail.jsx`, `LandingPageService.jsx`, `sitemap.xml`, `src/index.css`).
+2. Configurado redirect permanente `308` em `vercel.json` de `agenciavitrineweb.vercel.app` para `https://agenciavitrineweb.com.br/$1` (ADR-002).
+3. Validado com `npm run lint` (0 erros) e `npm run build` com sucesso.
 
 ## ⏳ Tarefas em Andamento
-1. Elaboração do relatório executivo e técnico detalhado para o usuário.
-2. Definição do plano de ação de curto, médio e longo prazo para geração de tráfego orgânico e conversão.
+1. Commit e push para `origin main` na Vercel e verificação ao vivo do redirect 308 e da página em produção.
 
 ## 🎯 Próxima Ação Imediata
-Enviar commit para produção no GitHub/Vercel e guiar o usuário na solicitação imediata de reindexação prioritária no Google Search Console.
+Confirmar propagação do deploy na Vercel e testar `https://agenciavitrineweb.com.br/` e `https://agenciavitrineweb.vercel.app/`.

@@ -416,10 +416,85 @@ export const LandingPageService = () => {
               </div>
             </div>
 
-            {/* Case 2: Clínica Odontológica */}
-            <div className="bg-white/80 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-8 md:p-12 shadow-sm">
+            {/* Case 2: Thaíssa Simitan */}
+            <div className="bg-white/80 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-8 md:p-12 mb-8 sm:mb-12 shadow-sm">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
                 <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center">
+                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1.5 sm:mb-2">
+                    Psicologia Clínica &amp; Sexologia
+                  </span>
+                  <h3 className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1E293B] mb-3 sm:mb-4">
+                    Thaíssa Simitan Psicologia
+                  </h3>
+                  <p className="text-xs sm:text-base font-light text-slate-600 leading-relaxed mb-5 sm:mb-6">
+                    Landing page editorial em dark mode para psicóloga especialista em TCC e Sexologia
+                    Clínica em Londrina. Desenvolvida com Schema.org local, nota máxima no Lighthouse e
+                    captação direta para agendamentos no WhatsApp.
+                  </p>
+
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                    <div className="p-3 sm:p-4 bg-slate-50 rounded-xl border border-slate-200">
+                      <div className="font-['Space_Grotesk'] text-xl sm:text-2xl md:text-3xl font-extrabold text-blue-600">
+                        100/100
+                      </div>
+                      <p className="text-[11px] sm:text-xs text-slate-600 font-medium">SEO &amp; Boas Práticas Lighthouse</p>
+                    </div>
+                    <div className="p-3 sm:p-4 bg-slate-50 rounded-xl border border-slate-200">
+                      <div className="font-['Space_Grotesk'] text-xl sm:text-2xl md:text-3xl font-extrabold text-emerald-600">
+                        1.1s • 0.00
+                      </div>
+                      <p className="text-[11px] sm:text-xs text-slate-600 font-medium">LCP Desktop &amp; CLS estável</p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="https://thaissasimitan.com.br"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1E293B] text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-black transition-all hover:scale-105 shadow-md w-full sm:w-auto min-h-[48px]"
+                      data-cursor="hover"
+                    >
+                      <span>Visitar projeto</span>
+                      <ExternalLink size={14} />
+                    </a>
+                    <a
+                      href="https://wa.me/554488680905?text=Ol%C3%A1!%20Vi%20o%20case%20da%20psic%C3%B3loga%20Tha%C3%ADssa%20Simitan%20e%20gostaria%20de%20uma%20Landing%20Page%20para%20meu%20consult%C3%B3rio."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-slate-300 text-slate-900 bg-white font-bold text-xs uppercase tracking-wider rounded-full hover:border-slate-900 transition-all hover:scale-105 shadow-xs w-full sm:w-auto min-h-[48px]"
+                      data-cursor="hover"
+                    >
+                      <span>Quero um projeto assim</span>
+                      <ArrowRight size={14} />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-7 order-1 lg:order-2 overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200 shadow-md bg-[#0d0d15]">
+                  <img
+                    src="/thaissa-simitan.png"
+                    alt="Landing Page Thaíssa Simitan Psicóloga desenvolvida pela Vitrine Web"
+                    className="w-full aspect-[5/3] object-cover hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Case 3: Clínica Odontológica */}
+            <div className="bg-white/80 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-8 md:p-12 shadow-sm">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+                <div className="lg:col-span-7 overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200 shadow-md">
+                  <img
+                    src="/dentista-cassiano.png"
+                    alt="Landing Page Odontologia desenvolvida pela Vitrine Web"
+                    className="w-full max-h-[260px] sm:max-h-[380px] md:max-h-none object-cover hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="lg:col-span-5 flex flex-col justify-center">
                   <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1.5 sm:mb-2">
                     Saúde & Estética Odontológica
                   </span>
@@ -457,15 +532,6 @@ export const LandingPageService = () => {
                     <span>Conversar sobre meu projeto</span>
                     <ArrowRight size={14} />
                   </a>
-                </div>
-
-                <div className="lg:col-span-7 order-1 lg:order-2 overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200 shadow-md">
-                  <img
-                    src="/dentista-cassiano.png"
-                    alt="Landing Page Odontologia desenvolvida pela Vitrine Web"
-                    className="w-full max-h-[260px] sm:max-h-[380px] md:max-h-none object-cover hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
                 </div>
               </div>
             </div>

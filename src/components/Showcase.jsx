@@ -16,6 +16,15 @@ const projects = [
     liveUrl: 'https://pacexai.com',
   },
   {
+    id: 'thaissa-simitan',
+    title: 'Thaíssa Simitan',
+    category: 'Landing Page de Alta Conversão',
+    description: 'Landing page clínica e editorial desenvolvida para psicóloga especialista em TCC e Sexologia Clínica em Londrina. Projetada com SEO técnico 100/100 no Lighthouse, Schema.org local e conversão direta para agendamentos no WhatsApp.',
+    image: '/thaissa-simitan.png',
+    features: ['SEO 100/100 & Schema.org Local', 'Design Editorial & Dark Mode Sofisticado', 'Agendamento Direto via WhatsApp'],
+    liveUrl: 'https://thaissasimitan.com.br',
+  },
+  {
     id: 'junior-moveis',
     title: 'Júnior Móveis',
     category: 'Landing Page de Alta Conversão',

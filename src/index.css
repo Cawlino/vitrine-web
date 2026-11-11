@@ -66,7 +66,7 @@ body {
 
 @media (min-width: 768px) {
   .projects-horizontal-track {
-    width: calc(100vw * var(--total-projects, 5));
+    width: calc(100vw * var(--total-projects, 6));
   }
   .services-horizontal-track {
     width: calc(100vw * var(--total-services, 4));
