@@ -200,9 +200,9 @@ export const SistemasWebService = () => {
             ref={titleRef}
             className="font-['Space_Grotesk'] text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[1.08] sm:leading-[1.05] text-[#1E293B] max-w-6xl break-words"
           >
-            Sistemas web complexos. <br className="hidden sm:inline" />
+            Criamos sistemas personalizados <br className="hidden sm:inline" />
             <span className="text-slate-900 underline decoration-indigo-500/40 decoration-4">
-              Execução veloz, simples e escalável.
+              para empresas
             </span>
           </h1>
 
@@ -211,9 +211,9 @@ export const SistemasWebService = () => {
             ref={subtitleRef}
             className="mt-5 sm:mt-8 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-slate-700 max-w-4xl leading-relaxed"
           >
-            Desenvolvemos plataformas SaaS sob medida, portais corporativos e microsserviços em nuvem.
-            Código limpo, segurança de ponta a ponta e escalabilidade para empresas que não aceitam
-            gargalos operacionais ou sistemas lentos de terceiros.
+            Um sistema próprio faz sentido quando sua equipe precisa reunir dados, conectar ferramentas
+            ou automatizar um processo que exige regras específicas. Criamos portais e plataformas web
+            para acompanhar essas rotinas com painéis, relatórios e acessos por perfil.
           </p>
 
           {/* CTAs */}
@@ -380,9 +380,9 @@ export const SistemasWebService = () => {
                     PaceX Analytics Platform
                   </h3>
                   <p className="text-xs sm:text-base font-light text-slate-600 leading-relaxed mb-5 sm:mb-6">
-                    Desenvolvemos uma plataforma web completa para processamento de telemetria e análise
-                    de performance com dashboards interativos, streaming de dados via WebSockets e relatórios
-                    executivos automatizados.
+                    Desenvolvemos a plataforma PaceX para transformar dados de telemetria em informações
+                    de desempenho. Os dados chegam em tempo real a painéis interativos e alimentam
+                    relatórios gerados automaticamente.
                   </p>
 
                   <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">

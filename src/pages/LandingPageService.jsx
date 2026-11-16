@@ -156,6 +156,10 @@ export const LandingPageService = () => {
 
   const faqs = [
     {
+      q: 'O que entra no orçamento de um site de uma página?',
+      a: 'O orçamento considera a estrutura da página, a produção do texto, o design e as integrações necessárias, como botão de WhatsApp ou formulário. No briefing, definimos o que será entregue e se o projeto precisa de domínio, hospedagem ou configuração de métricas.',
+    },
+    {
       q: 'Qual é o prazo médio de entrega de uma Landing Page?',
       a: 'Nosso ciclo de entrega é ágil e estruturado: após a reunião de briefing e aprovação da copy, a landing page completa, testada e com tracking configurado é entregue em até 7 a 10 dias úteis.',
     },
@@ -201,9 +205,9 @@ export const LandingPageService = () => {
             ref={titleRef}
             className="font-['Space_Grotesk'] text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[1.08] sm:leading-[1.05] text-[#1E293B] max-w-6xl break-words"
           >
-            Landing pages que transformam <br className="hidden sm:inline" />
+            Criação de site de uma página <br className="hidden sm:inline" />
             <span className="text-slate-900 underline decoration-blue-500/40 decoration-4">
-              cliques em faturamento real.
+              para empresas
             </span>
           </h1>
 
@@ -212,9 +216,9 @@ export const LandingPageService = () => {
             ref={subtitleRef}
             className="mt-5 sm:mt-8 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-slate-700 max-w-4xl leading-relaxed"
           >
-            Chega de templates genéricos e sites lentos que queimam seu investimento em anúncios.
-            Desenhamos experiências digitais sob medida com carregamento sub-1.2s, copywriting
-            persuasivo e foco obsessivo em atrair leads qualificados direto no seu WhatsApp.
+            Criamos uma página profissional, também chamada de landing page, para divulgar um serviço
+            e facilitar o contato pelo WhatsApp. O projeto reúne texto, design e as informações que o
+            visitante precisa para pedir um orçamento ou agendar um atendimento.
           </p>
 
           {/* CTAs */}
@@ -424,7 +428,7 @@ export const LandingPageService = () => {
                     Psicologia Clínica &amp; Sexologia
                   </span>
                   <h3 className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1E293B] mb-3 sm:mb-4">
-                    Thaíssa Simitan Psicologia
+                    Site de uma página para psicóloga · Thaíssa Simitan
                   </h3>
                   <p className="text-xs sm:text-base font-light text-slate-600 leading-relaxed mb-5 sm:mb-6">
                     Landing page editorial em dark mode para psicóloga especialista em TCC e Sexologia
@@ -499,7 +503,7 @@ export const LandingPageService = () => {
                     Saúde & Estética Odontológica
                   </span>
                   <h3 className="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1E293B] mb-3 sm:mb-4">
-                    Dr. Cassiano Odontologia
+                    Landing page para dentista · Dr. Cassiano
                   </h3>
                   <p className="text-xs sm:text-base font-light text-slate-600 leading-relaxed mb-5 sm:mb-6">
                     Landing page desenvolvida para captação de pacientes de implantes e lentes de contato

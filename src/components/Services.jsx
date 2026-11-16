@@ -9,9 +9,11 @@ const services = [
   {
     icon: Flame,
     title: 'Landing Pages de Alta Conversão',
+    href: '/criacao-de-landing-page',
+    linkText: 'Criação de site de uma página',
     subtitle: 'Presença Online Estratégica & Geração de Leads',
     description:
-      'Desenvolvemos landing pages personalizadas de altíssima performance, com design exclusivo, carregamento instantâneo e técnicas de persuasão voltadas para transformar visitantes em clientes qualificados via WhatsApp ou formulários.',
+      'Criamos sites de uma página para apresentar um serviço e facilitar pedidos de orçamento pelo WhatsApp ou por formulário.',
     highlights: [
       'Copywriting persuasivo e foco em ROI',
       'Carregamento ultrarrápido com pontuação máxima no Google',
@@ -22,9 +24,11 @@ const services = [
   {
     icon: Code2,
     title: 'Sistemas Web Sob Medida',
+    href: '/desenvolvimento-de-sistemas-web',
+    linkText: 'Sistemas personalizados',
     subtitle: 'Engenharia de Software Escalável & Full-Stack',
     description:
-      'Criamos sistemas web robustos, arquitetados com tecnologias modernas (React, TypeScript, Node.js, Python). Desenvolvemos desde plataformas SaaS até aplicações complexas com controle de usuários, APIs e alta segurança.',
+      'Desenvolvemos sistemas para processos que pedem uma solução própria, como portais com acesso por usuário, painéis de acompanhamento e integrações com ferramentas da empresa.',
     highlights: [
       'Arquitetura limpa, modular e altamente escalável',
       'Dashboards analíticos e métricas em tempo real',
@@ -35,9 +39,11 @@ const services = [
   {
     icon: LayoutDashboard,
     title: 'ERPs & Gestão Corporativa',
+    href: '/sistema-erp-sob-medida',
+    linkText: 'Sistema de gestão empresarial',
     subtitle: 'Automação Operacional & Controle Empresarial',
     description:
-      'Soluções completas de ERP e gestão corporativa desenvolvidas sob demanda para eliminar planilhas manuais, automatizar processos operacionais, organizar colaboradores e departamentos com eficiência máxima.',
+      'Montamos um sistema de gestão sob medida para reunir equipes, estoque e financeiro e reduzir o trabalho com planilhas separadas.',
     highlights: [
       'Controle centralizado de colaboradores e setores',
       'Relatórios e indicadores de desempenho',
@@ -312,6 +318,11 @@ export const Services = () => {
                       <span>Solicitar Orçamento</span>
                       <ArrowRight className="w-4 h-4" />
                     </a>
+                    {service.href && (
+                      <a href={service.href} className="mt-4 inline-block py-2 text-sm font-semibold underline underline-offset-4">
+                        {service.linkText}
+                      </a>
+                    )}
                   </div>
                 </div>
                 

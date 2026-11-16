@@ -199,9 +199,9 @@ export const ErpService = () => {
             ref={titleRef}
             className="font-['Space_Grotesk'] text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[1.08] sm:leading-[1.05] text-[#1E293B] max-w-6xl break-words"
           >
-            O ERP que se adapta à sua empresa. <br className="hidden sm:inline" />
+            Sistema de gestão empresarial <br className="hidden sm:inline" />
             <span className="text-slate-900 underline decoration-emerald-500/40 decoration-4">
-              Não o contrário.
+              sob medida
             </span>
           </h1>
 
@@ -210,9 +210,9 @@ export const ErpService = () => {
             ref={subtitleRef}
             className="mt-5 sm:mt-8 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-slate-700 max-w-4xl leading-relaxed"
           >
-            Substitua dezenas de planilhas manuais, erros de digitação e softwares engessados por um
-            sistema de gestão corporativa desenvolvido sob medida para a sua operação. Controle equipes,
-            financeiro, estoque e processos em um único ecossistema seguro.
+            ERP é um sistema que reúne áreas da empresa em um só lugar. Desenvolvemos a solução
+            para centralizar equipes, estoque e financeiro. Para migrar das planilhas, mapeamos os
+            dados atuais, revisamos os registros e validamos a importação com sua equipe.
           </p>
 
           {/* CTAs */}
@@ -379,9 +379,9 @@ export const ErpService = () => {
                     Plataforma de Gestão Corporativa
                   </h3>
                   <p className="text-xs sm:text-base font-light text-slate-600 leading-relaxed mb-5 sm:mb-6">
-                    A empresa gerenciava mais de 120 colaboradores através de 14 planilhas isoladas no Excel,
-                    enfrentando inconsistências financeiras e conflitos de dados. Desenvolvemos um ERP sob medida
-                    que unificou todos os setores em tempo recorde.
+                    A empresa usava 14 planilhas para gerenciar mais de 120 colaboradores. O ERP sob medida
+                    reuniu os dados de departamento pessoal e da operação em uma plataforma, reduzindo a
+                    necessidade de conferir informações entre arquivos.
                   </p>
 
                   <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
