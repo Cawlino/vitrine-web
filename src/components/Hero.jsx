@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { shouldAnimatePageIntro } from '../entries/mountPage.jsx';
 
 export const Hero = () => {
   const containerRef = useRef(null);
@@ -8,6 +9,7 @@ export const Hero = () => {
   const buttonsRef = useRef(null);
 
   useEffect(() => {
+    if (!shouldAnimatePageIntro()) return;
     const tl = gsap.timeline();
     
     tl.fromTo(titleRef.current, 
@@ -24,6 +26,7 @@ export const Hero = () => {
       { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
       "-=0.7"
     );
+    return () => tl.revert();
   }, []);
 
   return (

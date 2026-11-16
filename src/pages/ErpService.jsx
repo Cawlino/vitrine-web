@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { shouldAnimatePageIntro } from '../entries/mountPage.jsx';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
@@ -33,30 +34,32 @@ export const ErpService = () => {
   const [activeModule, setActiveModule] = useState(0);
 
   useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      titleRef.current,
-      { y: 60, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.9, ease: 'power4.out', delay: 0.1 }
-    )
-      .fromTo(
-        subtitleRef.current,
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' },
-        '-=0.6'
+    if (shouldAnimatePageIntro()) {
+      const tl = gsap.timeline();
+      tl.fromTo(
+        titleRef.current,
+        { y: 60, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.9, ease: 'power4.out', delay: 0.1 }
       )
-      .fromTo(
-        ctaButtonsRef.current,
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' },
-        '-=0.5'
-      )
-      .fromTo(
-        metricsRef.current ? metricsRef.current.children : [],
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: 'power3.out' },
-        '-=0.4'
-      );
+        .fromTo(
+          subtitleRef.current,
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' },
+          '-=0.6'
+        )
+        .fromTo(
+          ctaButtonsRef.current,
+          { y: 30, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' },
+          '-=0.5'
+        )
+        .fromTo(
+          metricsRef.current ? metricsRef.current.children : [],
+          { y: 30, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: 'power3.out' },
+          '-=0.4'
+        );
+    }
 
     const sections = document.querySelectorAll('.reveal-on-scroll');
     sections.forEach((sec) => {

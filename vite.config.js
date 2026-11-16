@@ -5,7 +5,23 @@ import { resolve } from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    {
+      name: 'render-page-before-transition',
+      transformIndexHtml: {
+        order: 'post',
+        handler(html) {
+          // Vite generates new entry script tags when it bundles the HTML.
+          return html.replace(
+            /<script type="module" crossorigin src="\/assets\/([^"]+)">/g,
+            '<script type="module" crossorigin blocking="render" src="/assets/$1">',
+          );
+        },
+      },
+    },
+  ],
   build: {
     rollupOptions: {
       input: {

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { shouldAnimatePageIntro } from '../../entries/mountPage.jsx';
 
 const headerPosition = 'fixed inset-x-0 top-0 h-20 sm:h-[88px] lg:h-[84px] px-4 sm:px-6 md:px-8';
 const focusStyle = 'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current';
@@ -10,13 +11,13 @@ export const SatelliteHeader = ({ currentSlug }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (containerRef.current) {
-      gsap.fromTo(
-        containerRef.current.children,
-        { y: -100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: 'power3.out', delay: 0.2 }
-      );
-    }
+    if (!shouldAnimatePageIntro()) return;
+    const intro = gsap.fromTo(
+      containerRef.current.children,
+      { y: -100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: 'power3.out', delay: 0.2 }
+    );
+    return () => intro.revert();
   }, []);
 
   // Lock body scroll when mobile menu is open
@@ -61,7 +62,7 @@ export const SatelliteHeader = ({ currentSlug }) => {
           {/* Brand Logo */}
           <a
             href="/"
-            className={`flex items-center gap-2 pointer-events-auto hover:opacity-80 ${focusStyle}`}
+            className={`flex items-center gap-0.5 pointer-events-auto hover:opacity-80 ${focusStyle}`}
             data-cursor="hover"
             aria-label="Vitrine Web - Início"
           >
@@ -76,7 +77,7 @@ export const SatelliteHeader = ({ currentSlug }) => {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-7 text-xs uppercase tracking-widest font-medium pointer-events-auto">
+          <nav className="hidden lg:flex items-center gap-8 text-sm uppercase tracking-widest font-medium pointer-events-auto">
             {navLinks.map((item) => (
               <a
                 key={item.label}
@@ -84,7 +85,7 @@ export const SatelliteHeader = ({ currentSlug }) => {
                 aria-current={item.active ? 'page' : undefined}
                 className={`py-1 transition-opacity ${focusStyle} ${
                   item.active
-                    ? 'font-bold underline decoration-2 underline-offset-8'
+                    ? 'underline decoration-2 underline-offset-8'
                     : 'hover:opacity-80'
                 }`}
                 data-cursor="hover"

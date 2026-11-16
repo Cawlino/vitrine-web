@@ -1,17 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { MobileMenu } from './MobileMenu';
+import { shouldAnimatePageIntro } from '../entries/mountPage.jsx';
 
 export const Header = ({ onNavigate }) => {
   const containerRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
+    if (!shouldAnimatePageIntro()) return;
     // Animate both header layers simultaneously
-    gsap.fromTo(containerRef.current.children,
+    const intro = gsap.fromTo(containerRef.current.children,
       { y: -100, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.5 }
     );
+    return () => intro.revert();
   }, []);
 
   return (
